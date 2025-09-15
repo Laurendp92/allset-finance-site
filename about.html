@@ -1,79 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Allset Finance Solutions</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Use same CSS as home -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Allset Finance Solutions</title>
+
+  <!-- Google font (optional, matches homepage look) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    /* Hero / navy used on homepage */
+    .hero-bg { background: #2a3a63; } /* lighter navy consistent with the site */
+    .logo-circle { background: #2a3a63; } /* same navy for the "AS" logo */
+    .nav-link { color: #21303f; } /* default nav link color */
+    .nav-link:hover { color: #2f7b55; } /* hover use green tint to match the button */
+  </style>
 </head>
-<body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">Allset Finance Solutions</a>
+<body class="antialiased text-slate-800 bg-slate-50">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center font-bold logo-circle">AS</div>
+        <div class="text-lg font-semibold">Allset Finance Solutions</div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html" class="nav-link hover:text-emerald-600">Home</a>
+        <a href="about.html" class="nav-link text-emerald-700 font-medium">About Us</a>
+        <a href="index.html#services" class="nav-link hover:text-emerald-600">Our Services</a>
+        <a href="index.html#how-it-works" class="nav-link hover:text-emerald-600">How it works</a>
+        <a href="index.html#contact" class="bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-700">Get a quote</a>
+      </nav>
+
+      <button class="md:hidden" aria-label="menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="index.html" class="block">Home</a>
+        <a href="about.html" class="block">About Us</a>
+        <a href="index.html#services" class="block">Our Services</a>
+        <a href="index.html#how-it-works" class="block">How it works</a>
+        <a href="index.html#contact" class="inline-block mt-2 text-white bg-emerald-600 px-4 py-2 rounded-md">Get a quote</a>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="index.html#services">Our Services</a></li>
-        <li><a href="index.html#how-it-works">How it works</a></li>
-      </ul>
-      <a href="index.html#get-quote" class="btn-quote">Get a Quote</a>
-    </nav>
+    </div>
   </header>
 
-  <!-- Hero Section (same style as home) -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>About Us</h1>
-      <p>
-        At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming.  
-        Whether you’re a contractor, startup, or growing business, our goal is simple:  
-        to give you clear numbers, practical insights, and peace of mind so you can focus on running your business.
-      </p>
-    </div>
-  </section>
-
-  <!-- About Details -->
-  <section class="about">
-    <div class="container">
-      <p>
-        We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of
-        experience in bookkeeping, tax compliance, financial reporting, and advisory.  
-        Having worked with businesses of all sizes — from one-person consultancies to international teams —  
-        we know the value of straightforward, reliable finance support.
-      </p>
-      <p><em>Based in Ireland, supporting clients nationwide.</em></p>
-    </div>
-  </section>
-
-  <!-- Mission & Difference -->
-  <section class="features">
-    <div class="container grid">
-      <div class="card">
-        <h3>Our Mission</h3>
-        <p>
-          To be your trusted financial compass — guiding you through the day-to-day while preparing you for the road ahead.  
-          We aim to simplify finance, reduce stress, and empower you with the tools and advice you need to grow confidently.
+  <!-- Hero (same style as home) -->
+  <section class="hero-bg text-white">
+    <div class="max-w-7xl mx-auto px-6 py-20">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">About Us</h1>
+        <p class="mt-6 text-lg text-slate-100">
+          At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple: to give you clear numbers, practical insights, and peace of mind so you can focus on running your business.
         </p>
       </div>
-      <div class="card">
-        <h3>What Makes Us Different</h3>
-        <ul>
-          <li><strong>Plain language:</strong> We explain your numbers clearly — no jargon, no clutter.</li>
-          <li><strong>Smart tools + human touch:</strong> We combine modern accounting software with expert guidance.</li>
-          <li><strong>Personalized support:</strong> We adapt our services to your business size and growth stage.</li>
+    </div>
+  </section>
+
+  <!-- Intro / short summary -->
+  <section class="bg-slate-50 py-12">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="text-lg text-slate-700 leading-relaxed">
+        We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, tax compliance, financial reporting, and advisory. Having worked with businesses of all sizes — from solo consultants to international teams — we understand the value of clear, reliable finance support.
+      </p>
+      <p class="mt-4 font-semibold text-slate-700">Based in Ireland, supporting clients nationwide.</p>
+    </div>
+  </section>
+
+  <!-- Mission & Differentiators -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- Mission Card -->
+      <div class="rounded-xl bg-white p-6 shadow">
+        <h2 class="text-xl font-semibold mb-3">Our Mission</h2>
+        <p class="text-slate-700 leading-relaxed">
+          To be your trusted financial compass — guiding you through the day-to-day while preparing you for the road ahead. We aim to simplify finance, reduce stress, and empower you with the tools and advice you need to grow confidently.
+        </p>
+        <ul class="mt-4 space-y-2 text-slate-600">
+          <li><strong>Practical clarity:</strong> Clear monthly reports and a KPI dashboard that focus on what matters.</li>
+          <li><strong>Predictability:</strong> Rolling cashflow forecasts and reminders so deadlines never sneak up on you.</li>
+          <li><strong>Growth-ready:</strong> Investor packs and reforecasting when you need to scale or fundraise.</li>
         </ul>
+      </div>
+
+      <!-- What Makes Us Different -->
+      <div class="rounded-xl bg-white p-6 shadow">
+        <h2 class="text-xl font-semibold mb-3">What Makes Us Different</h2>
+
+        <div class="space-y-4 text-slate-700">
+          <div>
+            <h3 class="font-medium">Plain language</h3>
+            <p class="text-sm text-slate-600">We explain your numbers in a way that makes sense — no jargon, no clutter.</p>
+          </div>
+
+          <div>
+            <h3 class="font-medium">Smart tools + human touch</h3>
+            <p class="text-sm text-slate-600">We combine modern accounting software (Xero, Dext/AutoEntry, Power BI/Looker Studio) with hands-on expertise to keep your books accurate and useful.</p>
+          </div>
+
+          <div>
+            <h3 class="font-medium">Forward-looking support</h3>
+            <p class="text-sm text-slate-600">Beyond compliance, we help you plan with dashboards, forecasts and investor-ready reports so you make confident decisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action (optional) -->
+  <section class="max-w-7xl mx-auto px-6 py-8">
+    <div class="rounded-xl bg-emerald-50 p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="text-lg font-semibold">Ready to tidy your numbers?</h3>
+        <p class="text-slate-700 text-sm">Tell us a bit about your business and we'll send a clear proposal.</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="index.html#contact" class="bg-emerald-600 text-white px-4 py-2 rounded-md">Get a Quote</a>
+        <a href="index.html#services" class="border border-slate-300 px-4 py-2 rounded-md">See Services</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Allset Finance Solutions. All Rights Reserved.</p>
+  <footer class="bg-white border-t py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-slate-600">• Allset Finance Solutions •</div>
+      <div class="flex gap-6 text-sm">
+        <a href="https://www.linkedin.com/company/allset-finance-solutions" target="_blank" class="text-slate-600 hover:text-emerald-600">LinkedIn</a>
+        <a href="https://www.instagram.com/allset_finance_solutions" target="_blank" class="text-slate-600 hover:text-emerald-600">Instagram</a>
+        <a href="https://www.facebook.com/share/16yQ3SnLJH/?mibextid=wwXIfr" target="_blank" class="text-slate-600 hover:text-emerald-600">Facebook</a>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>
