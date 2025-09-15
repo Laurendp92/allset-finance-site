@@ -62,7 +62,7 @@
   </header>
 
   <!-- Hero (blue) with intro + Irish-owned text included -->
-  <section class="hero-bg text-white py-28">
+  <section class="hero-bg text-white py-32">
     <div class="max-w-4xl mx-auto px-6 text-center leading-relaxed">
       <h1 class="text-5xl font-extrabold mb-8">About Us</h1>
 
@@ -70,7 +70,7 @@
         At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple: to give you tidy numbers, practical insights, and the peace of mind to focus on running your business.
       </p>
 
-      <p class="text-lg md:text-lg mb-4">
+      <p class="text-lg md:text-xl mb-6">
         We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, tax compliance, financial reporting and advisory. Having worked with businesses of all sizes — from solo consultants to international teams — we understand the value of clear, reliable finance support.
       </p>
 
@@ -78,10 +78,12 @@
     </div>
   </section>
 
-  <!-- Content: keep Mission & What Makes Us Different as-is -->
+  <!-- Content: Mission & What Makes Us Different -->
   <main class="max-w-7xl mx-auto px-6 py-16">
-    <div class="grid md:grid-cols-2 gap-10">
-      <div class="bg-white rounded-2xl p-10 card-shadow">
+    <div class="grid md:grid-cols-2 gap-10 items-stretch">
+      
+      <!-- Mission card -->
+      <div class="bg-white rounded-2xl p-10 card-shadow flex flex-col">
         <h2 class="text-2xl font-semibold mb-4">Our Mission</h2>
         <p class="text-slate-700">
           To be your trusted financial compass — guiding you through the day-to-day while preparing you for the road ahead. We aim to simplify finance, reduce stress, and empower you with the tools and advice you need to grow confidently.
@@ -94,19 +96,23 @@
         </ul>
       </div>
 
-       <h2 class="text-2xl font-semibold mb-4">What Makes Us Different</h2>
-  <p class="text-slate-700 mb-4">
-    We combine plain language with modern technology and professional oversight to deliver financial support that truly makes sense for your business.
-  </p>
+      <!-- What Makes Us Different card -->
+      <div class="bg-white rounded-2xl p-10 card-shadow flex flex-col">
+        <h2 class="text-2xl font-semibold mb-4">What Makes Us Different</h2>
+        <p class="text-slate-700 mb-4">
+          We combine plain language with modern technology and professional oversight to deliver financial support that truly makes sense for your business.
+        </p>
 
-  <ul class="space-y-3 text-slate-700">
-    <li><strong>Plain language:</strong> We explain your numbers in a way that makes sense — no jargon, no clutter, just clarity.</li>
-    <li><strong>Smart tools + expert oversight:</strong> We use trusted software (Xero, AutoEntry/Dext, Power BI/Looker Studio) combined with Chartered Accountant review, so your records are accurate and insights reliable.</li>
-    <li><strong>Forward-looking support:</strong> Beyond compliance, we provide rolling forecasts, dashboards, and investor-ready packs that help you plan for growth.</li>
-    <li><strong>Personalized partnership:</strong> We adapt our approach to your stage and industry — whether you’re a solo consultant, fast-growing startup, or established SME.</li>
-    <li><strong>Always accessible:</strong> You get responsive support when you need it, not weeks later — because financial clarity shouldn’t wait.</li>
-  </ul>
-</div>
+        <ul class="space-y-3 text-slate-700">
+          <li><strong>Plain language:</strong> We explain your numbers in a way that makes sense — no jargon, no clutter, just clarity.</li>
+          <li><strong>Smart tools + expert oversight:</strong> We use trusted software (Xero, AutoEntry/Dext, Power BI/Looker Studio) combined with Chartered Accountant review, so your records are accurate and insights reliable.</li>
+          <li><strong>Forward-looking support:</strong> Beyond compliance, we provide rolling forecasts, dashboards, and investor-ready packs that help you plan for growth.</li>
+          <li><strong>Personalized partnership:</strong> We adapt our approach to your stage and industry — whether you’re a solo consultant, fast-growing startup, or established SME.</li>
+          <li><strong>Always accessible:</strong> You get responsive support when you need it, not weeks later — because financial clarity shouldn’t wait.</li>
+        </ul>
+      </div>
+
+    </div>
   </main>
 
   <!-- CTA -->
@@ -137,7 +143,6 @@
 
   <!-- tiny script to ensure mobile menu toggles cleanly -->
   <script>
-    // No-op if menu doesn't exist (safe)
     (function(){
       var btn = document.querySelector('button[aria-label="menu"]');
       var menu = document.getElementById('mobile-menu');
@@ -148,4 +153,3 @@
 
 </body>
 </html>
-
