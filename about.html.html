@@ -1,69 +1,42 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us — Allset Finance Solutions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root { --navy: #2b3650; --emerald: #16a34a; }
-  </style>
-</head>
-<body class="bg-slate-50 text-slate-800">
-  <header class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold" style="background:var(--navy)">AS</div>
-        <div class="text-lg font-semibold text-slate-900">Allset Finance Solutions</div>
-      </a>
+<section class="bg-gray-50 py-16">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-6">About Us</h2>
+    <p class="text-lg text-gray-700 mb-4">
+      At Allset Finance Solutions, we believe finance should be simple, transparent, and stress-free.
+      Whether you’re a contractor, startup, or growing business, our mission is to give you clarity and
+      confidence with your numbers — so you can focus on running and growing your business.
+    </p>
+    <p class="text-gray-700 mb-4">
+      We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of
+      experience across bookkeeping, tax compliance, financial reporting, and advisory. Having worked with
+      businesses of all sizes — from solo consultants to international teams — we understand the value of
+      clear, reliable finance support you can trust.
+    </p>
+    <p class="font-semibold text-gray-900"> Based in Ireland, supporting clients nationwide.</p>
+  </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-slate-700">
-        <a href="index.html" class="hover:text-emerald-600">Home</a>
-        <a href="index.html#services" class="hover:text-emerald-600">Services</a>
-        <a href="index.html#how-it-works" class="hover:text-emerald-600">How it works</a>
-        <a href="index.html#get-quote" class="text-white bg-emerald-600 px-3 py-2 rounded-md">Get a quote</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="max-w-5xl mx-auto px-6 py-16">
-    <h1 class="text-3xl font-bold text-center">About Us</h1>
-
-    <section class="mt-8 text-center max-w-3xl mx-auto">
-      <p class="text-lg text-slate-700 leading-relaxed">
-        At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple: to give you clear numbers, practical insights, and peace of mind so you can focus on running your business.
+  <div class="max-w-5xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+    <!-- Mission Card -->
+    <div class="bg-white shadow-md rounded-2xl p-6">
+      <h3 class="text-xl font-semibold mb-3 flex items-center">
+        <span class="mr-2"</span> Our Mission
+      </h3>
+      <p class="text-gray-700">
+        To be your trusted financial compass — keeping your day-to-day on track while helping you prepare
+        for what’s ahead.
       </p>
-
-      <p class="mt-4 text-slate-600 leading-relaxed">
-        We are led by a Chartered Accountant with years of experience in bookkeeping, tax compliance, financial reporting, and advisory. Having worked with businesses of all sizes — from one-person consultancies to international teams — we know the value of straightforward, reliable finance support.
-      </p>
-
-      <p class="mt-4 text-slate-600"><strong>Based in Ireland, supporting clients nationwide.</strong></p>
-    </section>
-
-    <div class="mt-12 grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h2 class="text-xl font-semibold">Our Mission</h2>
-        <p class="mt-3 text-slate-600">To be your financial compass — guiding you through the day-to-day and preparing you for the road ahead.</p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h2 class="text-xl font-semibold">What Makes Us Different</h2>
-        <ul class="mt-3 space-y-4 text-slate-600">
-          <li><strong>Plain language:</strong> We explain your numbers in a way that makes sense — no jargon, no clutter.</li>
-          <li><strong>Smart tools + human touch:</strong> We combine modern accounting software with hands-on expertise, so your books are accurate and your insights are meaningful.</li>
-          <li><strong>Forward-looking support:</strong> Beyond compliance, we help you plan ahead with dashboards, forecasts, and investor-ready reports.</li>
-        </ul>
-      </div>
     </div>
-  </main>
 
-  <footer class="bg-white border-t py-6">
-    <div class="max-w-7xl mx-auto px-6 text-center text-slate-600">
-      &copy; <span id="yr"></span> Allset Finance Solutions
+    <!-- What Makes Us Different Card -->
+    <div class="bg-white shadow-md rounded-2xl p-6">
+      <h3 class="text-xl font-semibold mb-3 flex items-center">
+        <span class="mr-2"</span> What Makes Us Different
+      </h3>
+      <ul class="space-y-3 text-gray-700">
+        <li><strong>Plain language:</strong> Clear, simple explanations of your numbers — no jargon, no fluff.</li>
+        <li><strong>Smart tools + personal touch:</strong> The best of modern accounting software, backed by real expertise.</li>
+        <li><strong>Future-focused support:</strong> Forecasts, dashboards, and investor-ready insights that keep you ahead.</li>
+      </ul>
     </div>
-  </footer>
-
-  <script>document.getElementById('yr').innerText = new Date().getFullYear();</script>
-</body>
-</html>
+  </div>
+</section>
