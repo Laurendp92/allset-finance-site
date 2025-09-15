@@ -2,49 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Allset Finance Solutions</title>
+  <meta name="description" content="About Allset Finance Solutions — Irish accounting, bookkeeping, KPI dashboards and forward-looking finance support." />
 
-  <!-- Google font + Tailwind -->
+  <!-- Fonts + Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root {
-      --navy: #2c3247;
-      --accent-green: #3f9a66;
+    :root{
+      --navy: #2a3240;       /* site navy */
+      --accent-green: #3f9a66; /* green CTA */
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-    /* subtle card shadow used on several places */
-    .card-shadow { box-shadow: 0 10px 20px rgba(15,23,42,0.06); }
-
-    /* ensure hero text wraps nicely at large sizes like home */
-    .hero-title { letter-spacing: -0.02em; }
+    .logo-circle { background: var(--navy); }
+    .hero-bg { background: var(--navy); }
+    .card-shadow { box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
+    /* ensure links look consistent */
+    a { text-decoration: none; }
   </style>
 </head>
 <body class="antialiased text-slate-800 bg-slate-50">
 
-  <!-- Header (fixed to match homepage behavior) -->
-  <header class="fixed inset-x-0 top-0 bg-white border-b z-50">
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-bold">AS</div>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold logo-circle">AS</div>
         <div class="text-lg font-semibold">Allset Finance Solutions</div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-slate-700 hover:text-[var(--accent-green)]">Home</a>
-        <!-- current page -->
-        <a href="about.html" class="text-[var(--navy)] font-medium" aria-current="page">About Us</a>
-        <a href="index.html#services" class="text-slate-700 hover:text-[var(--accent-green)]">Our Services</a>
-        <a href="index.html#how-it-works" class="text-slate-700 hover:text-[var(--accent-green)]">How it works</a>
-        <a href="index.html#contact" class="bg-[var(--accent-green)] text-white px-4 py-2 rounded-md hover:opacity-95">Get a quote</a>
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="hover:text-emerald-600">Home</a>
+        <a href="about.html" class="text-emerald-600 font-medium">About Us</a>
+        <a href="index.html#services" class="hover:text-emerald-600">Our Services</a>
+        <a href="index.html#how-it-works" class="hover:text-emerald-600">How it works</a>
+        <a href="index.html#contact" class="text-white bg-[var(--accent-green)] px-4 py-2 rounded-md hover:opacity-95">Get a quote</a>
       </nav>
 
-      <!-- mobile menu toggle -->
-      <button id="mobile-toggle" class="md:hidden text-slate-700" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <!-- Mobile toggle -->
+      <button class="md:hidden" aria-label="menu" id="mobile-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
@@ -53,94 +54,95 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
       <div class="px-6 py-4 flex flex-col gap-3">
-        <a href="index.html" class="block text-slate-700">Home</a>
-        <a href="about.html" class="block font-medium text-[var(--navy)]">About Us</a>
-        <a href="index.html#services" class="block text-slate-700">Our Services</a>
-        <a href="index.html#how-it-works" class="block text-slate-700">How it works</a>
+        <a href="index.html" class="block">Home</a>
+        <a href="about.html" class="block font-medium">About Us</a>
+        <a href="index.html#services" class="block">Our Services</a>
+        <a href="index.html#how-it-works" class="block">How it works</a>
         <a href="index.html#contact" class="inline-block mt-2 text-white bg-[var(--accent-green)] px-4 py-2 rounded-md">Get a quote</a>
       </div>
     </div>
   </header>
 
-  <!-- Spacer to avoid header overlap (header is fixed) -->
-  <div class="h-16" aria-hidden="true"></div>
+  <!-- Hero (blue) — slightly smaller than homepage hero so it sits nicely -->
+  <section class="hero-bg text-white py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <!-- Use the same bold+line-break style as the homepage hero -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">About Us</h1>
 
-  <!-- Blue hero (about) - sized to match homepage hero proportions but a bit tighter -->
-  <section id="about-hero" class="bg-[var(--navy)] text-white">
-    <div class="max-w-7xl mx-auto px-6 py-20 text-center">
-      <!-- use the same big bold style as home but slightly smaller to avoid text crowding -->
-      <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">About Us</h1>
-
-      <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-200">
-        At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple:
-        to give you tidy numbers, practical insights, and the peace of mind to focus on running your business.
+      <p class="text-base md:text-lg text-slate-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+        At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple: to give you tidy numbers, practical insights, and the peace of mind to focus on running your business.
       </p>
 
-      <!-- Irish-owned copy included in the hero, as requested -->
-      <p class="mt-6 max-w-3xl mx-auto text-base md:text-lg text-slate-200">
-        We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, tax compliance,
-        financial reporting and advisory. Having worked with businesses of all sizes — from solo consultants to international teams — we understand
-        the value of clear, reliable finance support.
+      <!-- Irish-owned copy moved into the blue hero as requested -->
+      <p class="text-sm md:text-base text-slate-200 max-w-3xl mx-auto mb-1">
+        We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, tax compliance, financial reporting and advisory. Having worked with businesses of all sizes — from solo consultants to international teams — we understand the value of clear, reliable finance support.
       </p>
 
-      <p class="mt-4 text-sm md:text-base font-semibold text-slate-200/90">Based in Ireland, supporting clients nationwide.</p>
+      <p class="text-sm md:text-sm font-semibold text-slate-100 mt-3">Based in Ireland, supporting clients nationwide.</p>
     </div>
   </section>
 
-  <!-- Main content: Mission + What Makes Us Different (two-card layout) -->
-  <main class="max-w-7xl mx-auto px-6 py-16">
+  <!-- Main content (mission + differences) -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
     <div class="grid md:grid-cols-2 gap-8 items-start">
       <!-- Mission card -->
-      <article class="bg-white rounded-2xl p-8 card-shadow h-full flex flex-col">
+      <section class="bg-white rounded-2xl p-8 card-shadow">
         <h2 class="text-2xl font-semibold mb-4">Our Mission</h2>
 
-        <p class="text-slate-700 mb-4">
-          To be your trusted financial compass — guiding you through the day-to-day while preparing you for the road ahead.
-          We aim to simplify finance, reduce stress, and empower you with the tools and advice you need to grow confidently.
+        <p class="text-slate-700 mb-4 leading-relaxed">
+          To be your trusted financial compass — keeping the day-to-day on track while helping you prepare for what's ahead.
+          We simplify finance so you can run your business with confidence: tidy books, clear reports, and guidance that helps you make better decisions.
         </p>
 
-        <p class="text-slate-700 mb-4">
-          We do this by combining organised, timely bookkeeping with clear reporting and forward-looking guidance so you always know:
-          where your business stands, what next month will look like, and what decisions will help you reach your goals.
-        </p>
-
-        <ul class="mt-auto space-y-3 text-slate-700">
-          <li><strong>Practical clarity:</strong> Concise monthly reports and KPI dashboards that focus on what matters.</li>
-          <li><strong>Predictability:</strong> Rolling cashflow forecasts and reminders so deadlines never sneak up on you.</li>
-          <li><strong>Growth-ready:</strong> Investor packs, reforecasting and cap-table support when you need to scale or fundraise.</li>
+        <p class="text-slate-700 mb-3"><strong>We deliver:</strong></p>
+        <ul class="space-y-3 text-slate-600">
+          <li><strong>Practical clarity:</strong> Short monthly reports and KPI dashboards highlighting only what matters so you can act quickly.</li>
+          <li><strong>Predictability:</strong> Rolling cashflow forecasts, reminders and schedules so VAT, payroll and tax dates never catch you out.</li>
+          <li><strong>Growth-ready support:</strong> Investor packs, reforecasting and cap-table help when you need to scale, fundraise or apply for grants.</li>
+          <li><strong>Human access:</strong> Real conversations and timely responses — not late, generic emails.</li>
         </ul>
-      </article>
+      </section>
 
-      <!-- What Makes Us Different card -->
-      <article class="bg-white rounded-2xl p-8 card-shadow h-full flex flex-col">
-        <h2 class="text-2xl font-semibold mb-4">What Makes Us Different</h2>
+      <!-- What Makes Us Different -->
+      <section>
+        <div class="bg-white rounded-2xl p-8 card-shadow h-full">
+          <h2 class="text-2xl font-semibold mb-4">What Makes Us Different</h2>
 
-        <p class="text-slate-700 mb-4">
-          We combine plain language, modern tools, and Chartered Accountant oversight so your books are accurate and your insights are useful.
-          Beyond compliance, we build simple dashboards and forecasts that let you make confident decisions.
-        </p>
+          <p class="text-slate-700 mb-4 leading-relaxed">
+            We combine plain language with modern tools and Chartered Accountant oversight to give you reliable numbers and actionable insight.
+          </p>
 
-        <ul class="space-y-3 text-slate-700">
-          <li><strong>Plain language:</strong> We explain your numbers clearly — no jargon, no clutter.</li>
-          <li><strong>Smart tools + expert oversight:</strong> We use Xero, AutoEntry/Dext and Looker Studio / Power BI, combined with CA review for accuracy.</li>
-          <li><strong>Forward-looking support:</strong> Dashboards, rolling forecasts and investor-ready reporting to help you plan and pitch.</li>
-          <li><strong>Personalised partnership:</strong> We adapt our approach to your company stage — solo consultant, growing startup or established SME.</li>
-          <li><strong>Responsive & practical:</strong> Quick answers when you need them and actionable advice that saves time and reduces risk.</li>
-        </ul>
-      </article>
+          <ul class="space-y-4 text-slate-700">
+            <li>
+              <strong>Plain language:</strong> We explain your numbers without jargon — clear takeaways and next steps, not long technical reports.
+            </li>
+            <li>
+              <strong>Smart tools + expert oversight:</strong> We use Xero / AutoEntry / Dext and Power BI / Looker Studio for fast, accurate workflows — then a Chartered Accountant reviews the outputs so insights are dependable.
+            </li>
+            <li>
+              <strong>Forward-looking support:</strong> Rolling forecasts, scenario modelling and investor-ready packs so you’re prepared for opportunities and risks.
+            </li>
+            <li>
+              <strong>Personalised partnership:</strong> We adapt our level of support to your stage — from solo consultants to fast-growth startups and small teams.
+            </li>
+            <li>
+              <strong>Responsive & practical:</strong> Prompt, useful advice — not busywork. We prioritise the actions that reduce risk and free time for your business.
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   </main>
 
-  <!-- CTA band (same feel as other pages) -->
-  <section id="ready" class="max-w-7xl mx-auto px-6 py-8">
-    <div class="rounded-xl bg-emerald-50 p-6 flex flex-col md:flex-row items-center justify-between gap-4 card-shadow">
+  <!-- CTA band (same style as other pages) -->
+  <section class="max-w-7xl mx-auto px-6 pb-12">
+    <div class="rounded-xl bg-emerald-50 p-6 flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
         <h3 class="text-lg font-semibold">Ready to tidy your numbers?</h3>
-        <p class="text-slate-700 text-sm">Tell us a bit about your business and we'll send a clear proposal.</p>
+        <p class="text-slate-700 text-sm">Tell us a bit about your business and we’ll send a clear proposal.</p>
       </div>
-
       <div class="flex gap-3">
-        <a href="index.html#contact" class="bg-[var(--accent-green)] text-white px-4 py-2 rounded-md hover:opacity-95">Get a Quote</a>
+        <a href="index.html#contact" class="bg-[var(--accent-green)] text-white px-4 py-2 rounded-md">Get a Quote</a>
         <a href="index.html#services" class="border border-slate-300 px-4 py-2 rounded-md">See Services</a>
       </div>
     </div>
@@ -149,29 +151,32 @@
   <!-- Footer -->
   <footer class="bg-white border-t py-6">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-sm text-slate-600">© <span id="year"></span> Allset Finance Solutions. All Rights Reserved.</div>
+      <div class="text-sm text-slate-600">© 2025 Allset Finance Solutions. All Rights Reserved.</div>
       <div class="flex gap-6 text-sm">
-        <a href="https://www.linkedin.com/company/allset-finance-solutions" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.instagram.com/allset_finance_solutions" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.facebook.com/share/16yQ3SnLJH/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.linkedin.com/company/allset-finance-solutions" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/allset_finance_solutions" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/share/16yQ3SnLJH/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile menu toggle + small helpers -->
+  <!-- Small script: toggle mobile menu, close menu when a link is clicked -->
   <script>
-    // mobile menu toggle
     (function () {
-      var btn = document.getElementById('mobile-toggle');
-      var menu = document.getElementById('mobile-menu');
-      if (!btn || !menu) return;
-      btn.addEventListener('click', function () {
-        menu.classList.toggle('hidden');
-      });
-    })();
+      const mobileBtn = document.getElementById('mobile-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        // hide menu when user clicks any link inside
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        }));
+      }
 
-    // set footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+      // ensure anchor navigation to index anchors works on mobile/relative paths:
+      // nothing needed here as we've used index.html#contact etc.
+    })();
   </script>
+
 </body>
 </html>
