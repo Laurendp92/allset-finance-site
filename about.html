@@ -1,98 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allset Finance Solutions</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Allset Finance Solutions</title>
+
+  <!-- Google font + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    html {
-      scroll-behavior: smooth;
+    :root {
+      --navy: #2c3247;
+      --accent-green: #3f9a66;
     }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+    /* subtle card shadow used on several places */
+    .card-shadow { box-shadow: 0 10px 20px rgba(15,23,42,0.06); }
+
+    /* ensure hero text wraps nicely at large sizes like home */
+    .hero-title { letter-spacing: -0.02em; }
   </style>
 </head>
-<body class="font-sans">
+<body class="antialiased text-slate-800 bg-slate-50">
 
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <div class="flex items-center space-x-3">
-        <div class="bg-gray-800 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center">AS</div>
-        <span class="font-semibold text-lg">Allset Finance Solutions</span>
-      </div>
-      <nav class="flex items-center space-x-8">
-        <a href="#home" class="text-gray-700 hover:text-green-600">Home</a>
-        <a href="#about" class="text-gray-700 hover:text-green-600">About Us</a>
-        <a href="#services" class="text-gray-700 hover:text-green-600">Our Services</a>
-        <a href="#how-it-works" class="text-gray-700 hover:text-green-600">How it works</a>
-        <a href="#quote" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Get a Quote</a>
+  <!-- Header (fixed to match homepage behavior) -->
+  <header class="fixed inset-x-0 top-0 bg-white border-b z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-bold">AS</div>
+        <div class="text-lg font-semibold">Allset Finance Solutions</div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-slate-700 hover:text-[var(--accent-green)]">Home</a>
+        <!-- current page -->
+        <a href="about.html" class="text-[var(--navy)] font-medium" aria-current="page">About Us</a>
+        <a href="index.html#services" class="text-slate-700 hover:text-[var(--accent-green)]">Our Services</a>
+        <a href="index.html#how-it-works" class="text-slate-700 hover:text-[var(--accent-green)]">How it works</a>
+        <a href="index.html#contact" class="bg-[var(--accent-green)] text-white px-4 py-2 rounded-md hover:opacity-95">Get a quote</a>
       </nav>
+
+      <!-- mobile menu toggle -->
+      <button id="mobile-toggle" class="md:hidden text-slate-700" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="index.html" class="block text-slate-700">Home</a>
+        <a href="about.html" class="block font-medium text-[var(--navy)]">About Us</a>
+        <a href="index.html#services" class="block text-slate-700">Our Services</a>
+        <a href="index.html#how-it-works" class="block text-slate-700">How it works</a>
+        <a href="index.html#contact" class="inline-block mt-2 text-white bg-[var(--accent-green)] px-4 py-2 rounded-md">Get a quote</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="bg-gray-800 text-white text-center py-32 mt-16">
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-      Your Financial Compass:<br> Accounting & Bookkeeping in Ireland
-    </h1>
-    <p class="mt-4 text-lg text-gray-200">
-      Simple, transparent finance support for Irish contractors, startups, and growing businesses.
-    </p>
-    <div class="mt-6 flex justify-center space-x-4">
-      <a href="#quote" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700">Get a Quote</a>
-      <a href="#services" class="border border-white text-white px-6 py-3 rounded hover:bg-gray-700">See Services</a>
+  <!-- Spacer to avoid header overlap (header is fixed) -->
+  <div class="h-16" aria-hidden="true"></div>
+
+  <!-- Blue hero (about) - sized to match homepage hero proportions but a bit tighter -->
+  <section id="about-hero" class="bg-[var(--navy)] text-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+      <!-- use the same big bold style as home but slightly smaller to avoid text crowding -->
+      <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">About Us</h1>
+
+      <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-200">
+        At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple:
+        to give you tidy numbers, practical insights, and the peace of mind to focus on running your business.
+      </p>
+
+      <!-- Irish-owned copy included in the hero, as requested -->
+      <p class="mt-6 max-w-3xl mx-auto text-base md:text-lg text-slate-200">
+        We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, tax compliance,
+        financial reporting and advisory. Having worked with businesses of all sizes — from solo consultants to international teams — we understand
+        the value of clear, reliable finance support.
+      </p>
+
+      <p class="mt-4 text-sm md:text-base font-semibold text-slate-200/90">Based in Ireland, supporting clients nationwide.</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="bg-gray-800 text-white text-center py-32">
-    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-      About Us
-    </h2>
-    <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
-      At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple: 
-      to give you tidy numbers, practical insights, and the peace of mind to focus on running your business.
-    </p>
-    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-200">
-      We are proudly an <strong>Irish–owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, tax compliance, financial reporting and advisory. 
-      Having worked with businesses of all sizes — from solo consultants to international teams — we understand the value of clear, reliable finance support.
-    </p>
-    <p class="mt-4 max-w-3xl mx-auto text-lg font-semibold">
-      Based in Ireland, supporting clients nationwide.
-    </p>
-  </section>
+  <!-- Main content: Mission + What Makes Us Different (two-card layout) -->
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- Mission card -->
+      <article class="bg-white rounded-2xl p-8 card-shadow h-full flex flex-col">
+        <h2 class="text-2xl font-semibold mb-4">Our Mission</h2>
 
-  <!-- Services Section -->
-  <section id="services" class="bg-gray-50 py-20 text-center">
-    <h2 class="text-3xl font-bold mb-8">What We Do</h2>
-    <p class="max-w-2xl mx-auto text-gray-600">
-      Simple, focused financial services tailored to your business needs.
-    </p>
-  </section>
+        <p class="text-slate-700 mb-4">
+          To be your trusted financial compass — guiding you through the day-to-day while preparing you for the road ahead.
+          We aim to simplify finance, reduce stress, and empower you with the tools and advice you need to grow confidently.
+        </p>
 
-  <!-- How It Works -->
-  <section id="how-it-works" class="bg-white py-20 text-center">
-    <h2 class="text-3xl font-bold mb-8">How It Works</h2>
-    <p class="max-w-2xl mx-auto text-gray-600">
-      A streamlined process to help you achieve clarity and growth.
-    </p>
-  </section>
+        <p class="text-slate-700 mb-4">
+          We do this by combining organised, timely bookkeeping with clear reporting and forward-looking guidance so you always know:
+          where your business stands, what next month will look like, and what decisions will help you reach your goals.
+        </p>
 
-  <!-- Quote Section -->
-  <section id="quote" class="bg-gray-100 py-20 text-center">
-    <h2 class="text-3xl font-bold mb-8">Get a Quote</h2>
-    <p class="max-w-2xl mx-auto text-gray-600">
-      Contact us today to get a tailored quote for your business.
-    </p>
-    <a href="mailto:info@allsetfinancesolutions.com" class="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700">
-      Email Us
-    </a>
+        <ul class="mt-auto space-y-3 text-slate-700">
+          <li><strong>Practical clarity:</strong> Concise monthly reports and KPI dashboards that focus on what matters.</li>
+          <li><strong>Predictability:</strong> Rolling cashflow forecasts and reminders so deadlines never sneak up on you.</li>
+          <li><strong>Growth-ready:</strong> Investor packs, reforecasting and cap-table support when you need to scale or fundraise.</li>
+        </ul>
+      </article>
+
+      <!-- What Makes Us Different card -->
+      <article class="bg-white rounded-2xl p-8 card-shadow h-full flex flex-col">
+        <h2 class="text-2xl font-semibold mb-4">What Makes Us Different</h2>
+
+        <p class="text-slate-700 mb-4">
+          We combine plain language, modern tools, and Chartered Accountant oversight so your books are accurate and your insights are useful.
+          Beyond compliance, we build simple dashboards and forecasts that let you make confident decisions.
+        </p>
+
+        <ul class="space-y-3 text-slate-700">
+          <li><strong>Plain language:</strong> We explain your numbers clearly — no jargon, no clutter.</li>
+          <li><strong>Smart tools + expert oversight:</strong> We use Xero, AutoEntry/Dext and Looker Studio / Power BI, combined with CA review for accuracy.</li>
+          <li><strong>Forward-looking support:</strong> Dashboards, rolling forecasts and investor-ready reporting to help you plan and pitch.</li>
+          <li><strong>Personalised partnership:</strong> We adapt our approach to your company stage — solo consultant, growing startup or established SME.</li>
+          <li><strong>Responsive & practical:</strong> Quick answers when you need them and actionable advice that saves time and reduces risk.</li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <!-- CTA band (same feel as other pages) -->
+  <section id="ready" class="max-w-7xl mx-auto px-6 py-8">
+    <div class="rounded-xl bg-emerald-50 p-6 flex flex-col md:flex-row items-center justify-between gap-4 card-shadow">
+      <div>
+        <h3 class="text-lg font-semibold">Ready to tidy your numbers?</h3>
+        <p class="text-slate-700 text-sm">Tell us a bit about your business and we'll send a clear proposal.</p>
+      </div>
+
+      <div class="flex gap-3">
+        <a href="index.html#contact" class="bg-[var(--accent-green)] text-white px-4 py-2 rounded-md hover:opacity-95">Get a Quote</a>
+        <a href="index.html#services" class="border border-slate-300 px-4 py-2 rounded-md">See Services</a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 text-center">
-    <p>&copy; 2024 Allset Finance Solutions. All rights reserved.</p>
+  <footer class="bg-white border-t py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-slate-600">© <span id="year"></span> Allset Finance Solutions. All Rights Reserved.</div>
+      <div class="flex gap-6 text-sm">
+        <a href="https://www.linkedin.com/company/allset-finance-solutions" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/allset_finance_solutions" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/share/16yQ3SnLJH/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
   </footer>
 
+  <!-- Mobile menu toggle + small helpers -->
+  <script>
+    // mobile menu toggle
+    (function () {
+      var btn = document.getElementById('mobile-toggle');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+      });
+    })();
+
+    // set footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
