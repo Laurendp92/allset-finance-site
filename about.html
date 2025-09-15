@@ -1,119 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Allset Finance Solutions</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — Allset Finance Solutions</title>
+  <meta name="description" content="Learn about Allset Finance Solutions, an Irish-owned company providing bookkeeping, tax, and financial advisory services." />
+  <link rel="canonical" href="https://allsetfinancesolutions.com/about.html" />
+  <!-- ✅ Make sure Tailwind is loaded -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --navy: #28324a;
+      --emerald: #16a34a;
+    }
+    html { scroll-behavior: smooth; }
+    .hero-bg { background: var(--navy); }
+    .main-font { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .header-logo { background: var(--navy); }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="antialiased text-slate-800 bg-slate-50 main-font">
 
-  <!-- Navigation -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="/" class="text-xl font-bold text-blue-700">Allset Finance Solutions</a>
-      <nav class="hidden md:flex space-x-6">
-        <a href="/" class="hover:text-blue-700">Home</a>
-        <a href="/about" class="text-blue-700 font-semibold">About</a>
-        <a href="/services" class="hover:text-blue-700">Services</a>
-        <a href="/contact" class="hover:text-blue-700">Contact</a>
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white text-lg font-bold header-logo">AS</div>
+        <div class="text-lg font-semibold text-slate-900">Allset Finance Solutions</div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-base text-slate-700">
+        <a href="/" class="text-gray-700 hover:text-green-600">Home</a>
+        <a href="/about.html" class="text-gray-700 hover:text-gray-900">About Us</a>
+        <a href="/#services" class="hover:text-emerald-600">Our Services</a>
+        <a href="/#how-it-works" class="hover:text-emerald-600">How it works</a>
+        <a href="/#contact" class="px-4 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700">Get a Quote</a>
       </nav>
+
       <!-- Mobile menu button -->
-      <button id="menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7" />
+      <button class="md:hidden" aria-label="menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
-    <!-- Mobile dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-      <a href="/" class="block hover:text-blue-700">Home</a>
-      <a href="/about" class="block text-blue-700 font-semibold">About</a>
-      <a href="/services" class="block hover:text-blue-700">Services</a>
-      <a href="/contact" class="block hover:text-blue-700">Contact</a>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="/about.html">About Us</a>
+        <a href="/#services">Our Services</a>
+        <a href="/#how-it-works">How it works</a>
+        <a href="/#contact" class="inline-block mt-2 px-4 py-2 rounded-md bg-white text-emerald-600 border border-emerald-600 hover:bg-emerald-600 hover:text-white">Get a Quote</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-700 text-white py-20 text-center">
-    <div class="container mx-auto px-6">
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-        About Us <br />
-        <span class="font-light">Allset Finance Solutions</span>
-      </h1>
+  <!-- About Hero -->
+  <section class="hero-bg text-white">
+    <div class="max-w-4xl mx-auto px-6 py-14 md:py-20 text-center">
+      <h1 class="font-extrabold text-4xl md:text-5xl leading-tight">About Us</h1>
+
+      <p class="mt-6 text-lg text-slate-100">
+  At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. Whether you’re a contractor, startup, or growing business, our goal is simple: to give you tidy numbers, practical insights, and the peace of mind to focus on running your business.
+</p>
+
+<p class="mt-6 text-lg text-slate-100">
+  We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, tax compliance, financial reporting, and advisory. Having worked with businesses of all sizes — from solo consultants to international teams — we understand the value of clear, reliable finance support. 
+</p>
+
+<p class="mt-6 text-lg text-slate-100">
+  We also specialise in helping new ventures get off the ground — from <strong>startup registrations</strong> and setting up financial systems, to ongoing support as your company grows. Our role is to make sure your business is built on solid financial foundations right from day one.
+</p>
+
+<p class="mt-6 text-lg text-slate-100 font-semibold">
+  Based in Ireland, supporting clients nationwide.
+</p>
     </div>
   </section>
 
-  <!-- About Us Content -->
-  <section class="container mx-auto px-6 py-12 max-w-4xl">
-    <div class="space-y-6 text-lg leading-relaxed">
-      <p>
-        At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. 
-        Whether you’re a contractor, startup, or growing business, our goal is simple: 
-        to give you tidy numbers, practical insights, and the confidence to focus on running your business.
-      </p>
-      <p>
-        We are proudly an Irish-owned company, led by a Chartered Accountant with years of experience in 
-        bookkeeping, tax compliance, financial reporting, and advisory. Having worked with businesses 
-        of all sizes — from solo consultants to international teams — we understand the value of clear, reliable finance support.
-      </p>
-      <p>
-        Based in Ireland, supporting clients nationwide.
-      </p>
-    </div>
-  </section>
+  <!-- Mission / What Makes Us Different -->
+  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
+    <div class="bg-white shadow rounded-xl p-8">
+  <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+  <p class="text-slate-600 leading-relaxed">
+    Our mission is to empower small businesses, contractors, and startups across Ireland with finance that makes sense. We want our clients to feel confident about their numbers and spend less time worrying about compliance or reports — and more time building their businesses.
+  </p>
+  <p class="mt-4 text-slate-600 leading-relaxed">
+    For new founders, that means guiding you through registrations, compliance, and early-stage finance so you start on the right track. For established businesses, it means ensuring clarity, structure, and insights that support long-term growth.
+  </p>
+  <p class="mt-4 text-slate-600 leading-relaxed">
+    Ultimately, our mission is about peace of mind: knowing that your finances are under control, so you can fully focus on what you do best — running and growing your business.
+  </p>
+</div>
 
-  <!-- Mission & Difference Cards -->
-  <section class="bg-gray-50 py-16">
-    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 max-w-6xl">
-      <!-- Mission -->
-      <div class="bg-white rounded-2xl shadow p-8">
-        <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
-        <p class="mb-4">
-          Our mission is to empower small businesses and contractors across Ireland with finance that makes sense. 
-          We are committed to being proactive — providing reminders before deadlines, regular updates, and 
-          guidance that helps you plan ahead instead of scrambling at the last minute.
-        </p>
-        <p class="mb-4">
-          For growing companies, that means timely insights and financial structure that support long-term success. 
-          For established businesses, it means clarity and ongoing partnership you can rely on.
-        </p>
-        <p>
-          Ultimately, our mission is about peace of mind: knowing your finances are under control, 
-          so you can fully focus on what you do best — running and growing your business.
-        </p>
-      </div>
-
-      <!-- What Makes Us Different -->
-      <div class="bg-white rounded-2xl shadow p-8">
-        <h2 class="text-2xl font-bold mb-4">What Makes Us Different</h2>
-        <ul class="space-y-3">
-          <li><span class="font-semibold">Clarity:</span> Plain-English reporting and insights.</li>
-          <li><span class="font-semibold">Reliability:</span> Consistent, timely bookkeeping and compliance support.</li>
-          <li><span class="font-semibold">Start-up focus:</span> We help new businesses register, set up systems, and build strong financial foundations from day one.</li>
-          <li><span class="font-semibold">Partnership:</span> We work as an extension of your business, not just a service provider.</li>
-          <li><span class="font-semibold">Growth:</span> We support you at every stage, helping you make decisions that build long-term success.</li>
-        </ul>
-      </div>
-    </div>
+    <div class="bg-white shadow rounded-xl p-8">
+  <h2 class="text-2xl font-bold mb-4">What Makes Us Different</h2>
+  <ul class="space-y-3 text-slate-600">
+    <li><strong>Clarity:</strong> Plain-English reporting and insights.</li>
+    <li><strong>Reliability:</strong> Consistent, timely bookkeeping and compliance support.</li>
+    <li><strong>Start-up focus:</strong> We help new businesses register, set up systems, and build strong financial foundations from day one.</li>
+    <li><strong>Partnership:</strong> We work as an extension of your business, not just a service provider.</li>
+    <li><strong>Growth:</strong> We support you at every stage, helping you make decisions that build long-term success.</li>
+  </ul>
+</div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-700 text-white py-6 mt-12">
-    <div class="container mx-auto px-6 text-center">
-      <p>&copy; 2025 Allset Finance Solutions. All rights reserved.</p>
+  <footer class="bg-white border-t py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-slate-600">• Allset Finance Solutions •</div>
+      <div class="flex gap-6">
+        <a href="https://www.linkedin.com/company/allset-finance-solutions" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/allset_finance_solutions" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/share/16yQ3SnLJH/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
-
 </body>
 </html>
+
+
