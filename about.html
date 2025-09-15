@@ -6,11 +6,12 @@
   <title>About Us — Allset Finance Solutions</title>
   <meta name="description" content="Learn about Allset Finance Solutions, an Irish-owned company providing bookkeeping, tax, and financial advisory services." />
   <link rel="canonical" href="https://allsetfinancesolutions.com/about.html" />
+  <!-- ✅ Make sure Tailwind is loaded -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
       --navy: #28324a;
-      --emerald: #2f8f5b; /* slightly deeper green for better contrast */
+      --emerald: #16a34a;
     }
     html { scroll-behavior: smooth; }
     .hero-bg { background: var(--navy); }
@@ -29,11 +30,11 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-base text-slate-700">
-        <a href="/" class="text-gray-700 hover:text-emerald-600">Home</a>
+        <a href="/" class="text-gray-700 hover:text-green-600">Home</a>
         <a href="/about.html" class="text-gray-700 hover:text-gray-900">About Us</a>
         <a href="/#services" class="hover:text-emerald-600">Our Services</a>
         <a href="/#how-it-works" class="hover:text-emerald-600">How it works</a>
-        <a href="/#contact" class="px-4 py-2 rounded-md bg-[var(--emerald)] text-white hover:bg-emerald-700">Get a Quote</a>
+        <a href="/#contact" class="px-4 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700">Get a Quote</a>
       </nav>
 
       <!-- Mobile menu button -->
@@ -50,7 +51,7 @@
         <a href="/about.html">About Us</a>
         <a href="/#services">Our Services</a>
         <a href="/#how-it-works">How it works</a>
-        <a href="/#contact" class="inline-block mt-2 px-4 py-2 rounded-md bg-white text-[var(--emerald)] border border-[var(--emerald)] hover:bg-[var(--emerald)] hover:text-white">Get a Quote</a>
+        <a href="/#contact" class="inline-block mt-2 px-4 py-2 rounded-md bg-white text-emerald-600 border border-emerald-600 hover:bg-emerald-600 hover:text-white">Get a Quote</a>
       </div>
     </div>
   </header>
@@ -60,48 +61,46 @@
     <div class="max-w-4xl mx-auto px-6 py-14 md:py-20 text-center">
       <h1 class="font-extrabold text-4xl md:text-5xl leading-tight">About Us</h1>
 
-      <p class="mt-6 text-lg md:text-xl text-slate-100 max-w-3xl mx-auto">
-        At Allset Finance Solutions, we believe finance should be clear, simple, and stress-free.
+      <p class="mt-6 text-lg text-slate-100">
+        At Allset Finance Solutions, we believe finance should be clear, simple, and stress-free. 
         Whether you’re a contractor, startup, growing company, or established organisation, our mission is to give you accurate numbers, practical insights, and the confidence to focus on what you do best — running your business.
       </p>
-
-      <p class="mt-6 text-base md:text-lg text-slate-200 max-w-3xl mx-auto">
-        We are a proudly Irish-owned firm, led by a Chartered Accountant with extensive experience in bookkeeping, tax compliance, financial reporting, and advisory. Over the years, we’ve partnered with businesses of every size — from solo consultants and SMEs to larger corporations and international teams — and we know the value of straightforward, reliable financial support you can trust.
+      <p class="mt-6 text-lg text-slate-100">
+        We are a proudly Irish-owned firm, led by a Chartered Accountant with extensive experience in bookkeeping, tax compliance, financial reporting, and advisory. 
+        Over the years, we’ve partnered with businesses of every size — from solo consultants and SMEs to larger corporations and international teams — and we know the value of straightforward, reliable financial support you can trust.
       </p>
-
-      <p class="mt-4 text-sm md:text-base text-slate-200 font-medium">Based in Ireland. Supporting clients nationwide.</p>
+      <p class="mt-6 text-lg text-slate-100 font-semibold">
+        Based in Ireland. Supporting clients nationwide.
+      </p>
     </div>
   </section>
 
   <!-- Mission / What Makes Us Different -->
-  <section class="max-w-6xl mx-auto px-6 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Mission Card -->
-      <div class="bg-white shadow rounded-xl p-8 flex flex-col h-full">
-        <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
-
-        <p class="text-base md:text-lg leading-relaxed text-slate-700">
-          Our mission is to empower businesses of all sizes — from solo consultants and startups to established organisations and international teams — with finance that makes sense.
-        </p>
-
-        <p class="mt-4 text-base md:text-lg leading-relaxed text-slate-700">
-          We provide clarity, proactive guidance, and timely insights so you can make confident decisions, stay ahead of deadlines, and focus on growth. Whether it’s day-to-day bookkeeping or forward-looking strategy, our goal is to give you peace of mind knowing your finances are in expert hands.
-        </p>
-      </div>
-
-      <!-- What Makes Us Different Card -->
-      <div class="bg-white shadow rounded-xl p-8 flex flex-col h-full">
-        <h2 class="text-2xl font-bold mb-4">What Makes Us Different</h2>
-
-        <ul class="space-y-3 text-base md:text-lg leading-relaxed text-slate-700">
-          <li><span class="font-semibold">Clarity:</span> Plain-English reporting and simple visuals.</li>
-          <li><span class="font-semibold">Reliability:</span> Accurate, on-time bookkeeping and compliance.</li>
-          <li><span class="font-semibold">Scalability:</span> Tailored support for contractors, SMEs, and large organisations.</li>
-          <li><span class="font-semibold">Partnership:</span> An extension of your team, not just a service provider.</li>
-          <li><span class="font-semibold">Future focus:</span> Forecasts, dashboards, and investor-ready insights.</li>
-        </ul>
-      </div>
+  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
+    
+    <!-- Mission Card -->
+    <div class="bg-white shadow rounded-xl p-8">
+      <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+      <p class="text-base md:text-lg leading-relaxed text-slate-700">
+        Our mission is to empower businesses of all sizes — from solo consultants and startups to established organisations and international teams — with finance that makes sense.
+      </p>
+      <p class="mt-4 text-base md:text-lg leading-relaxed text-slate-700">
+        We provide clarity, proactive guidance, and timely insights so you can make confident decisions, stay ahead of deadlines, and focus on growth. Whether it’s day-to-day bookkeeping or forward-looking strategy, our goal is to give you peace of mind knowing your finances are in expert hands.
+      </p>
     </div>
+
+    <!-- What Makes Us Different Card -->
+    <div class="bg-white shadow rounded-xl p-8">
+      <h2 class="text-2xl font-bold mb-4">What Makes Us Different</h2>
+      <ul class="space-y-3 text-base md:text-lg leading-relaxed text-slate-700">
+        <li><span class="font-semibold">Clarity:</span> Plain-English reporting and simple visuals.</li>
+        <li><span class="font-semibold">Reliability:</span> Accurate, on-time bookkeeping and compliance.</li>
+        <li><span class="font-semibold">Scalability:</span> Tailored support for contractors, SMEs, and large organisations.</li>
+        <li><span class="font-semibold">Partnership:</span> An extension of your team, not just a service provider.</li>
+        <li><span class="font-semibold">Future focus:</span> Forecasts, dashboards, and investor-ready insights.</li>
+      </ul>
+    </div>
+
   </section>
 
   <!-- Footer -->
