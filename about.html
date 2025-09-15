@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Allset Finance Solutions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css"> <!-- Use same CSS as home -->
 </head>
-<body class="font-sans bg-gray-50 text-gray-800">
-
-  <!-- Navigation -->
-  <nav class="flex justify-between items-center py-4 px-8 bg-white shadow">
-    <div class="flex items-center space-x-2">
-      <div class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center font-bold">
-        AS
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Allset Finance Solutions</a>
       </div>
-      <span class="font-semibold text-lg">Allset Finance Solutions</span>
-    </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="index.html#services">Our Services</a></li>
+        <li><a href="index.html#how-it-works">How it works</a></li>
+      </ul>
+      <a href="index.html#get-quote" class="btn-quote">Get a Quote</a>
+    </nav>
+  </header>
 
-    <div class="space-x-6">
-      <a href="index.html" class="text-gray-800 hover:text-green-600">Home</a>
-      <a href="index.html#about" class="text-gray-800 hover:text-green-600">About Us</a>
-      <a href="index.html#services" class="text-gray-800 hover:text-green-600">Our Services</a>
-      <a href="index.html#how-it-works" class="text-gray-800 hover:text-green-600">How it works</a>
-      <a href="index.html#contact" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
-        Get a Quote
-      </a>
+  <!-- Hero Section (same style as home) -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p>
+        At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming.  
+        Whether you’re a contractor, startup, or growing business, our goal is simple:  
+        to give you clear numbers, practical insights, and peace of mind so you can focus on running your business.
+      </p>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="bg-gray-900 text-white py-20 text-center">
-    <h1 class="text-4xl font-bold mb-4">About Us</h1>
-    <p class="max-w-2xl mx-auto text-lg">
-      At Allset Finance Solutions, we believe finance shouldn’t be confusing or overwhelming. 
-      Whether you’re a contractor, startup, or growing business, our goal is simple: 
-      to give you clear numbers, practical insights, and peace of mind so you can focus on running your business.
-    </p>
   </section>
 
-  <!-- Company Intro -->
-  <section class="py-12 px-8 text-center bg-gray-50">
-    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
-      We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of experience in bookkeeping, 
-      tax compliance, financial reporting, and advisory. Having worked with businesses of all sizes — from one-person consultancies 
-      to international teams — we know the value of straightforward, reliable finance support.
-    </p>
-    <p class="mt-4 font-semibold">Based in Ireland, supporting clients nationwide.</p>
+  <!-- About Details -->
+  <section class="about">
+    <div class="container">
+      <p>
+        We are proudly an <strong>Irish-owned company</strong>, led by a Chartered Accountant with years of
+        experience in bookkeeping, tax compliance, financial reporting, and advisory.  
+        Having worked with businesses of all sizes — from one-person consultancies to international teams —  
+        we know the value of straightforward, reliable finance support.
+      </p>
+      <p><em>Based in Ireland, supporting clients nationwide.</em></p>
+    </div>
   </section>
 
   <!-- Mission & Difference -->
-  <section class="py-16 px-8 grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-    <div class="bg-white shadow-md rounded-2xl p-6">
-      <h2 class="text-xl font-semibold mb-4">Our Mission</h2>
-      <p>
-        To be your trusted financial compass — guiding you through the day-to-day while preparing you for the road ahead. 
-        We aim to simplify finance, reduce stress, and empower you with the tools and advice you need to grow confidently.
-      </p>
-    </div>
-
-    <div class="bg-white shadow-md rounded-2xl p-6">
-      <h2 class="text-xl font-semibold mb-4">What Makes Us Different</h2>
-      <ul class="space-y-3">
-        <li><strong>Plain language:</strong> We explain your numbers in a way that makes sense — no jargon, no clutter.</li>
-        <li><strong>Smart tools + human touch:</strong> We combine modern accounting software with hands-on expertise, so your books are accurate and your insights are meaningful.</li>
-        <li><strong>Forward-looking support:</strong> Beyond compliance, we help you plan ahead with dashboards, forecasts, and investor-ready reports.</li>
-      </ul>
+  <section class="features">
+    <div class="container grid">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+          To be your trusted financial compass — guiding you through the day-to-day while preparing you for the road ahead.  
+          We aim to simplify finance, reduce stress, and empower you with the tools and advice you need to grow confidently.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What Makes Us Different</h3>
+        <ul>
+          <li><strong>Plain language:</strong> We explain your numbers clearly — no jargon, no clutter.</li>
+          <li><strong>Smart tools + human touch:</strong> We combine modern accounting software with expert guidance.</li>
+          <li><strong>Personalized support:</strong> We adapt our services to your business size and growth stage.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-center py-6 mt-12">
-    <p>&copy; 2025 Allset Finance Solutions. All rights reserved.</p>
+  <footer>
+    <div class="container">
+      <p>© 2025 Allset Finance Solutions. All Rights Reserved.</p>
+    </div>
   </footer>
-
 </body>
 </html>
