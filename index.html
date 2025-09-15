@@ -8,32 +8,47 @@
   <link rel="canonical" href="https://allsetfinancesolutions.com/" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html { scroll-behavior: smooth }
-    .hero-bg { background: linear-gradient(90deg,#0f172a 0%, #0ea5a4 100%); }
+    :root{
+      --navy: #28324a; /* unified professional navy */
+      --emerald: #16a34a;
+    }
+    html { scroll-behavior: smooth; }
+    .hero-bg { background: var(--navy); }
+    .main-font { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .header-logo { background: var(--navy); } /* circle background */
+    /* small visual tweaks */
+    .service-step { background: #ecfbf2; color: #166534; }
+    @media (min-width: 768px){
+      .hero-heading { font-size: 3.25rem; line-height: 1.02; } /* slightly smaller than extreme */
+    }
   </style>
 </head>
-<body class="antialiased text-slate-800 bg-slate-50">
+<body class="antialiased text-slate-800 bg-slate-50 main-font">
+
   <!-- Header -->
   <header class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
       <a href="#hero" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold">AS</div>
-        <div class="text-lg font-semibold">Allset Finance Solutions</div>
+        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white text-lg font-bold header-logo">AS</div>
+        <div class="text-lg font-semibold text-slate-900">Allset Finance Solutions</div>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#services" class="hover:text-emerald-600">Services</a>
-        <a href="#packages" class="hover:text-emerald-600">Packages</a>
+
+      <nav class="hidden md:flex items-center gap-8 text-base text-slate-700">
+        <a href="#about" class="hover:text-emerald-600">About Us</a>
+        <a href="#services" class="hover:text-emerald-600">Our Services</a>
         <a href="#how-it-works" class="hover:text-emerald-600">How it works</a>
         <a href="#contact" class="text-white bg-emerald-600 px-4 py-2 rounded-md hover:bg-emerald-700">Get a quote</a>
       </nav>
+
       <button class="md:hidden" aria-label="menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
+
     <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
       <div class="px-6 py-4 flex flex-col gap-3">
-        <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
         <a href="#how-it-works">How it works</a>
         <a href="#contact" class="inline-block mt-2 text-white bg-emerald-600 px-4 py-2 rounded-md">Get a quote</a>
       </div>
@@ -42,35 +57,41 @@
 
   <!-- Hero -->
   <section id="hero" class="hero-bg text-white">
-    <div class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
-      <div class="md:w-6/12">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Your Financial Compass: Accounting & Bookkeeping in Ireland</h1>
+    <div class="max-w-7xl mx-auto px-6 py-24 flex items-center justify-center">
+      <div class="w-full max-w-3xl text-center">
+        <h1 class="font-extrabold hero-heading text-4xl md:text-5xl leading-tight">Your Financial Compass: Accounting &amp; Bookkeeping in Ireland</h1>
         <p class="mt-6 text-lg text-slate-100">Simple, transparent finance support for Irish contractors, startups, and growing businesses.</p>
 
-        <div class="mt-8 flex gap-3">
-          <a href="#contact" class="inline-block bg-white text-emerald-600 px-6 py-3 rounded-md font-semibold">Get a quote</a>
-          <a href="#packages" class="inline-block border border-white px-6 py-3 rounded-md">See packages</a>
+        <div class="mt-8 flex justify-center gap-4">
+          <a href="#contact" class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-emerald-700">Get a Quote</a>
+          <a href="#services" class="inline-block border border-white px-6 py-3 rounded-md text-white">See Services</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- About Us Section -->
+<section id="about" class="py-16 bg-gray-50">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">About Us</h2>
+    <p class="text-lg text-gray-700 mb-6">
+      At Allset Finance Solutions, we make finance clear and practical for Irish businesses. 
+      Our goal is simple: to give you tidy numbers, practical insights, and the peace of mind 
+      to focus on running your business.
+    </p>
+     </div>
+</section>
   <!-- Services -->
- <section id="services" class="max-w-7xl mx-auto px-6 py-16">
-  <div class="grid md:grid-cols-2 gap-8 items-start">
-    <!-- Left column: Intro -->
-    <div>
-      <h2 class="text-2xl font-bold">What we do — simple, focused services</h2>
-<p class="mt-3 text-slate-600">
-At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers in plain English, show them in clear visuals, and give you the clarity and confidence to run your business with control.
-</p>
-  
-       
-      </p>
-        <!-- Adjusted spacing and alignment -->
-        <ul class="mt-8 space-y-8">
+  <section id="services" class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-bold">What we do — simple, focused services</h2>
+        <p class="mt-3 text-slate-600">At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers in plain English, show them in clear visuals, and give you the clarity and confidence to run your business with control.</p>
+
+        <!-- consistent spacing between items -->
+        <ul class="mt-8 space-y-5">
           <li class="flex gap-5 items-start">
-            <div class="w-10 h-10 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">1</div>
+            <div class="w-10 h-10 rounded-md flex items-center justify-center service-step font-semibold">1</div>
             <div class="leading-relaxed">
               <h4 class="font-semibold">Smart Bookkeeping</h4>
               <p class="mt-1 text-sm text-slate-600">Bank reconciliations, categorisation, and tidy ledgers so your numbers are ready when you need them.</p>
@@ -78,7 +99,7 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
           </li>
 
           <li class="flex gap-5 items-start">
-            <div class="w-10 h-10 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">2</div>
+            <div class="w-10 h-10 rounded-md flex items-center justify-center service-step font-semibold">2</div>
             <div class="leading-relaxed">
               <h4 class="font-semibold">KPI Dashboard &amp; Reports</h4>
               <p class="mt-1 text-sm text-slate-600">Custom dashboards with the few metrics that matter — explained in plain language.</p>
@@ -86,7 +107,7 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
           </li>
 
           <li class="flex gap-5 items-start">
-            <div class="w-10 h-10 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">3</div>
+            <div class="w-10 h-10 rounded-md flex items-center justify-center service-step font-semibold">3</div>
             <div class="leading-relaxed">
               <h4 class="font-semibold">VAT, Payroll &amp; Taxes</h4>
               <p class="mt-1 text-sm text-slate-600">We prepare VAT returns, manage payroll for small teams, and remind you about tax dates so nothing sneaks up on you.</p>
@@ -94,7 +115,7 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
           </li>
 
           <li class="flex gap-5 items-start">
-            <div class="w-10 h-10 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">4</div>
+            <div class="w-10 h-10 rounded-md flex items-center justify-center service-step font-semibold">4</div>
             <div class="leading-relaxed">
               <h4 class="font-semibold">Cashflow Forecasts &amp; Investor Packs</h4>
               <p class="mt-1 text-sm text-slate-600">Rolling forecasts, investor-ready reports and pitch-deck numbers when you need funding or grants.</p>
@@ -103,24 +124,25 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
         </ul>
       </div>
 
-      <div>
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60" alt="Dashboard preview" class="rounded-xl shadow-lg w-full" />
+      <div class="flex justify-center">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=60" alt="Dashboard preview" class="rounded-xl shadow-lg w-full object-cover max-h-96" />
       </div>
     </div>
   </section>
 
-  <!-- Packages -->
-  <section id="packages" class="bg-white border-t border-b py-16">
+  <!-- Plans -->
+  <section id="plans" class="bg-white border-t border-b py-16">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-2xl font-bold text-center">Packages — pick what fits your business</h2>
+      <h2 class="text-2xl font-bold text-center">Plans — pick what fits your business</h2>
       <p class="text-center text-slate-600 mt-2">Clear monthly support, a simple onboarding, and optional add-ons as you grow.</p>
 
       <div class="mt-8 grid md:grid-cols-4 gap-6 items-stretch">
+
         <!-- Foundations -->
         <article class="rounded-xl p-6 shadow-sm bg-emerald-50 flex flex-col h-full">
           <h3 class="font-semibold text-lg">Foundations</h3>
           <ul class="mt-4 text-sm space-y-2 text-slate-700 flex-1">
-            <li>Monthly bookkeeping & bank reconciliations</li>
+            <li>Monthly bookkeeping &amp; bank reconciliations</li>
             <li>VAT return preparation</li>
             <li>Receipt capture setup (Dext/AutoEntry)</li>
             <li>Monthly summary (PDF/Excel)</li>
@@ -165,11 +187,11 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
         <article class="rounded-xl p-6 shadow-md bg-white border flex flex-col h-full">
           <h3 class="font-semibold text-lg">Add-On Services</h3>
           <ul class="mt-4 text-sm space-y-2 text-slate-700 flex-1">
-            <li>ROS/VAT/PAYE registrations</li>
+            <li>ROS / VAT / PAYE registrations</li>
             <li>Grant application support</li>
             <li>Finance system setup (Xero, chart of accounts)</li>
             <li>Historical data clean-up / migration</li>
-               <li>Year-end accountant handover</li>
+            <li>Year-end accountant handover</li>
             <li>HR &amp; Payroll support</li>
             <li>Invoicing support</li>
           </ul>
@@ -177,6 +199,7 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
             <a href="#contact" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-md">Ask about add-ons</a>
           </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -190,13 +213,13 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
       <div class="bg-white p-6 rounded-lg shadow-sm text-center">
         <div class="text-emerald-600 font-bold">1</div>
         <h4 class="mt-2 font-semibold">Talk &amp; Pick a Plan</h4>
-        <p class="text-sm text-slate-600 mt-1">Quick call to understand your business and choose the right package.</p>
+        <p class="text-sm text-slate-600 mt-1">Quick call to understand your business and choose the right plan.</p>
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow-sm text-center">
         <div class="text-emerald-600 font-bold">2</div>
         <h4 class="mt-2 font-semibold">Easy Setup</h4>
-        <p class="text-sm text-slate-600 mt-1">We set up Xero, Dext and connect your banks — we do the heavy lifting.</p>
+        <p class="text-sm text-slate-600 mt-1">We set up Xero &amp; Dext and connect your banks — we do the heavy lifting.</p>
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow-sm text-center">
@@ -213,97 +236,86 @@ At Allset Finance Solutions, we go beyond bookkeeping. We explain your numbers i
     </div>
   </section>
 
- <!-- Contact / Form -->
-<section id="contact" class="max-w-3xl mx-auto px-6 py-16">
-  <h2 class="text-2xl font-bold text-center">Get in touch</h2>
-  <p class="text-center text-slate-600 mt-2">
-    Tell us a bit about your business and we’ll send a clear proposal.
-  </p>
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold text-center">Get in touch</h2>
+    <p class="text-center text-slate-600 mt-2">Tell us a bit about your business and we’ll send a clear proposal.</p>
 
-  <div class="mt-8 bg-white p-6 rounded-lg shadow">
-    <form 
-      name="contact" 
-      method="POST" 
-      data-netlify="true" 
-      netlify-honeypot="bot-field"
-      action="/thank-you.html"
-    >
-      <!-- Hidden required input for Netlify -->
-      <input type="hidden" name="form-name" value="contact">
-      
-      <!-- Honeypot field (hidden from users) -->
-      <p class="hidden">
-        <label>Don’t fill this out: <input name="bot-field" /></label>
-      </p>
+    <div class="mt-8 bg-white p-6 rounded-lg shadow">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
+        <!-- Netlify form required hidden field -->
+        <input type="hidden" name="form-name" value="contact" />
+        <!-- Honeypot -->
+        <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <label class="block">
-          <span class="text-sm font-medium text-slate-700">Your name</span>
-          <input 
-            type="text" 
-            name="name" 
-            required 
-            class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" 
-          />
-        </label>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Your name</span>
+            <input type="text" name="name" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" />
+          </label>
 
-        <label class="block">
-          <span class="text-sm font-medium text-slate-700">Email</span>
-          <input 
-            type="email" 
-            name="email" 
-            required 
-            class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" 
-          />
-        </label>
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Email</span>
+            <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" />
+          </label>
 
-        <label class="block md:col-span-2">
-          <span class="text-sm font-medium text-slate-700">Business name</span>
-          <input 
-            type="text" 
-            name="business" 
-            class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" 
-          />
-        </label>
+          <label class="block md:col-span-2">
+            <span class="text-sm font-medium text-slate-700">Business name</span>
+            <input type="text" name="business" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" />
+          </label>
 
-        <label class="block md:col-span-2">
-          <span class="text-sm font-medium text-slate-700">
-            Message (tell us what's most important right now)
-          </span>
-          <textarea 
-            name="message" 
-            rows="5" 
-            required 
-            class="mt-1 block w-full rounded-md border-gray-200 shadow-sm"
-          ></textarea>
-        </label>
-      </div>
-
-      <div class="mt-4 flex items-center justify-between">
-        <div class="text-sm text-slate-600">
-          Or email us directly: 
-          <a 
-            href="mailto:allsetfinancesolutions@gmail.com" 
-            class="text-emerald-600"
-          >
-            allsetfinancesolutions@gmail.com
-          </a>
+          <label class="block md:col-span-2">
+            <span class="text-sm font-medium text-slate-700">Message (tell us what's most important right now)</span>
+            <textarea name="message" rows="5" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm"></textarea>
+          </label>
         </div>
-        <button 
-          type="submit" 
-          class="bg-emerald-600 text-white px-5 py-2 rounded-md"
-        >
-          Send message
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
+
+        <div class="mt-4 flex items-center justify-between">
+          <div class="text-sm text-slate-600">
+            Or email us directly:
+            <a href="mailto:allsetfinancesolutions@gmail.com" class="text-emerald-600">allsetfinancesolutions@gmail.com</a>
+          </div>
+          <button type="submit" class="bg-emerald-600 text-white px-5 py-2 rounded-md">Send message</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-white border-t py-6">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-sm text-slate-600">• Allset Finance Solutions •
+      <div class="text-sm text-slate-600">• Allset Finance Solutions •</div>
+      <div class="flex gap-6">
+        <a href="https://www.linkedin.com/company/allset-finance-solutions" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/allset_finance_solutions" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/share/16yQ3SnLJH/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Small script: allow local testing of thank-you redirect (keeps Netlify behavior when deployed) -->
+  <script>
+    (function(){
+      const form = document.querySelector('form[name="contact"]');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        // If served locally via file:// (or if you want to test without a backend),
+        // intercept and redirect client-side to thank-you.html so you can test the flow.
+        if(location.protocol === 'file:'){
+          e.preventDefault();
+          // simple client-side validation fallback
+          const required = [...form.querySelectorAll('[required]')];
+          const invalid = required.some(inp => !inp.value.trim());
+          if(invalid){
+            alert('Please fill required fields before submitting.');
+            return;
+          }
+          window.location.href = 'thank-you.html';
+        }
+        // If deployed (http(s)), let the normal POST to server/Netlify proceed.
+      });
+    })();
+  </script>
+
 </body>
 </html>
