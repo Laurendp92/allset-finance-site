@@ -4,19 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us — Allset Finance Solutions</title>
-  <meta name="description" content="Learn about Allset Finance Solutions, an Irish-owned company providing bookkeeping, tax, and financial advisory services." />
+  <meta name="description" content="Learn more about Allset Finance Solutions, an Irish-owned firm providing bookkeeping, tax compliance, reporting, and financial insights for businesses of all sizes." />
   <link rel="canonical" href="https://allsetfinancesolutions.com/about.html" />
-  <!-- ✅ Make sure Tailwind is loaded -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{
-      --navy: #28324a;
+    :root {
+      --navy: #28324a; /* unified professional navy */
       --emerald: #16a34a;
     }
     html { scroll-behavior: smooth; }
     .hero-bg { background: var(--navy); }
     .main-font { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-    .header-logo { background: var(--navy); }
+    .header-logo { background: var(--navy); } /* circle background */
   </style>
 </head>
 <body class="antialiased text-slate-800 bg-slate-50 main-font">
@@ -29,15 +28,16 @@
         <div class="text-lg font-semibold text-slate-900">Allset Finance Solutions</div>
       </a>
 
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8 text-base text-slate-700">
-        <a href="/" class="text-gray-700 hover:text-green-600">Home</a>
-        <a href="/about.html" class="text-gray-700 hover:text-gray-900">About Us</a>
+        <a href="/" class="hover:text-emerald-600">Home</a>
+        <a href="/about.html" class="text-gray-900 font-semibold">About Us</a>
         <a href="/#services" class="hover:text-emerald-600">Our Services</a>
         <a href="/#how-it-works" class="hover:text-emerald-600">How it works</a>
         <a href="/#contact" class="px-4 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700">Get a Quote</a>
       </nav>
 
-      <!-- Mobile menu button -->
+      <!-- Mobile Menu Button -->
       <button class="md:hidden" aria-label="menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -45,64 +45,76 @@
       </button>
     </div>
 
-    <!-- Mobile menu -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
       <div class="px-6 py-4 flex flex-col gap-3">
-        <a href="/" class="hover:text-emerald-600">Home</a>
-        <a href="/about.html">About Us</a>
+        <a href="/">Home</a>
+        <a href="/about.html" class="font-semibold text-emerald-600">About Us</a>
         <a href="/#services">Our Services</a>
         <a href="/#how-it-works">How it works</a>
-        <a href="/#contact" class="inline-block mt-2 px-4 py-2 rounded-md bg-white text-emerald-600 border border-emerald-600 hover:bg-emerald-600 hover:text-white">Get a Quote</a>
+        <a href="/#contact" class="inline-block px-4 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700">Get a Quote</a>
       </div>
     </div>
   </header>
 
   <!-- About Hero -->
   <section class="hero-bg text-white">
-  <div class="max-w-7xl mx-auto px-6 py-24 text-center">
-    <h1 class="font-extrabold text-4xl md:text-5xl leading-tight">About Us</h1>
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Text -->
+      <div>
+        <h1 class="font-extrabold text-4xl md:text-5xl leading-tight">About Us</h1>
 
-    <p class="mt-6 text-lg text-slate-100">
-      At Allset Finance Solutions, we believe finance should be clear, simple, and stress-free. Whether you’re a contractor, startup, growing company, or established organisation, our mission is to give you accurate numbers, practical insights, and the confidence to focus on what you do best — running your business.
-    </p>
-    <p class="mt-6 text-lg text-slate-100">
-      We are a proudly Irish-owned firm, led by a Chartered Accountant with extensive experience in bookkeeping, tax compliance, financial reporting, and advisory. Over the years, we’ve partnered with businesses of every size — from solo consultants and SMEs to larger corporations and international teams — and we know the value of straightforward, reliable financial support you can trust.
-    </p>
-    <p class="mt-6 text-lg text-slate-100 font-semibold">
-      Based in Ireland. Supporting clients nationwide.
-    </p>
-  </div>
-</section>
+        <p class="mt-6 text-lg text-slate-100">
+          At Allset Finance Solutions, we believe finance should be clear, simple, and stress-free. Whether you’re a contractor, startup, growing company, or established organisation, our mission is to give you accurate numbers, practical insights, and the confidence to focus on what you do best — running your business.
+        </p>
+        <p class="mt-6 text-lg text-slate-100">
+          We are a proudly Irish-owned firm, led by a Chartered Accountant with extensive experience in bookkeeping, tax compliance, financial reporting, and advisory. Over the years, we’ve partnered with businesses of every size — from solo consultants and SMEs to larger corporations and international teams — and we know the value of straightforward, reliable financial support you can trust.
+        </p>
+        <p class="mt-6 text-lg text-slate-100 font-semibold">
+          Based in Ireland. Supporting clients nationwide.
+        </p>
+      </div>
 
-  <!-- Mission / What Makes Us Different -->
-  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
-    
-    <!-- Mission Card -->
-    <div class="bg-white shadow rounded-xl p-8">
-      <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
-<p class="text-base md:text-lg leading-relaxed text-slate-700">
-  Our mission is to empower businesses of all sizes — from solo consultants and startups to established organisations and international teams — with finance that makes sense.
-</p>
-<p class="mt-4 text-base md:text-lg leading-relaxed text-slate-700">
-  We provide clarity, proactive guidance, and timely insights so you can make confident decisions, stay ahead of deadlines, and focus on growth. Whether it’s day-to-day bookkeeping or forward-looking strategy, our goal is to give you peace of mind knowing your finances are in expert hands.
-<p class="mt-4 text-base md:text-lg leading-relaxed text-slate-700">
-  More than compliance, we deliver clear, actionable insights that drive smarter decisions and long-term success.
-</p>
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img 
+          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80" 
+          alt="Small business owner working confidently" 
+          class="rounded-xl shadow-lg w-full object-cover max-h-96"
+        />
+      </div>
     </div>
+  </section>
 
-    <!-- What Makes Us Different Card -->
-    <div class="bg-white shadow rounded-xl p-8">
-      <h2 class="text-2xl font-bold mb-4">What Makes Us Different</h2>
-      <ul class="space-y-3 text-base md:text-lg leading-relaxed text-slate-700">
-        <li><span class="font-semibold">Clarity:</span> Easy-to-understand reporting and simple visuals.</li>
-        <li><span class="font-semibold">End-to-end support:</span> From setup to full financial guidance, we’re with you all the way.</li>
-        <li><span class="font-semibold">Reliability:</span> Accurate, on-time bookkeeping and compliance.</li>
-        <li><span class="font-semibold">Scalability:</span> Tailored support for contractors, SMEs, and large organisations.</li>
-        <li><span class="font-semibold">Partnership:</span> An extension of your team, not just a service provider.</li>
-        <li><span class="font-semibold">Future focus:</span> Forecasts, dashboards, and investor-ready insights.</li>
-      </ul>
+  <!-- Mission & Difference -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold">Our Mission</h2>
+        <p class="mt-3 text-slate-600">
+          Our mission is to empower businesses of all sizes — from solo consultants and startups to established organisations and international teams — with finance that makes sense.
+        </p>
+        <p class="mt-3 text-slate-600">
+          We provide clarity, proactive guidance, and timely insights so you can make confident decisions, stay ahead of deadlines, and focus on growth. Whether it’s day-to-day bookkeeping or forward-looking strategy, our goal is to give you peace of mind knowing your finances are in expert hands.
+        </p>
+        <p class="mt-3 text-slate-600">
+          More than compliance, we deliver clear, actionable insights that drive smarter decisions and long-term success.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold">What Makes Us Different</h2>
+        <ul class="mt-3 space-y-2 text-slate-600">
+          <li><strong>Clarity:</strong> Easy-to-understand reporting and simple visuals.</li>
+          <li><strong>End-to-end support:</strong> From setup to full financial guidance, we’re with you all the way.</li>
+          <li><strong>Reliability:</strong> Accurate, on-time bookkeeping and compliance.</li>
+          <li><strong>Scalability:</strong> Tailored support for contractors, SMEs, and large organisations.</li>
+          <li><strong>Partnership:</strong> An extension of your team, not just a service provider.</li>
+          <li><strong>Future focus:</strong> Forecasts, dashboards, and investor-ready insights.</li>
+        </ul>
+      </div>
     </div>
-
   </section>
 
   <!-- Footer -->
@@ -116,13 +128,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
-
-
-
-
-
-
-
