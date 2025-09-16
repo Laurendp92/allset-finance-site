@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Allset Finance Solutions — Your Financial Compass</title>
   <meta name="description" content="Accounting and Bookkeeping services with KPI dashboards and insights for small businesses." />
-  <link rel="canonical" href="https://allsetfinancesolutions.com/" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
-      --navy: #28324a; /* unified professional navy */
+      --navy: #28324a;
       --emerald: #16a34a;
     }
     html { scroll-behavior: smooth; }
     .hero-bg { background: var(--navy); }
     .main-font { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
     .header-logo { background: var(--navy); } /* circle background */
-    /* small visual tweaks */
     .service-step { background: #ecfbf2; color: #166534; }
     @media (min-width: 768px){
       .hero-heading { font-size: 3.25rem; line-height: 1.02; } /* slightly smaller than extreme */
@@ -80,11 +78,11 @@
   <!-- Services -->
   <section id="services" class="max-w-7xl mx-auto px-6 py-16">
     <div class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- LEFT: text / list -->
       <div>
         <h2 class="text-2xl font-bold">What we do — simple, focused services</h2>
         <p class="mt-3 text-slate-600">At Allset Finance Solutions, we go beyond bookkeeping. We transform your numbers into clear, meaningful insights, present them in straightforward visuals, and give you the clarity and confidence to run your business with control.</p>
 
-        <!-- consistent spacing between items -->
         <ul class="mt-8 space-y-5">
           <li class="flex gap-4 items-start">
             <div class="w-8 h-8 rounded-md flex items-center justify-center service-step font-semibold">1</div>
@@ -120,14 +118,17 @@
         </ul>
       </div>
 
-      
-    <!-- Image -->
-    <div class="flex justify-center">
-      <img src="finance-tools.png" 
-           alt="Financial tools on desk with calculator and documents" 
-           class="rounded-lg shadow-lg max-w-full h-auto" />
+      <!-- RIGHT: image (robust: tries local file; falls back to Unsplash) -->
+      <div class="flex justify-center">
+        <img
+          src="finance-tools.png"
+          alt="Financial tools on desk with calculator, pen and documents"
+          class="rounded-xl shadow-lg w-full max-w-xl h-80 object-cover"
+          loading="lazy"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80';"
+        />
+      </div>
     </div>
-</div>
   </section>
 
   <!-- Plans -->
@@ -242,9 +243,7 @@
 
     <div class="mt-8 bg-white p-6 rounded-lg shadow">
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
-        <!-- Netlify form required hidden field -->
         <input type="hidden" name="form-name" value="contact" />
-        <!-- Honeypot -->
         <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -292,17 +291,13 @@
     </div>
   </footer>
 
-  <!-- Small script: allow local testing of thank-you redirect (keeps Netlify behavior when deployed) -->
   <script>
     (function(){
       const form = document.querySelector('form[name="contact"]');
       if(!form) return;
       form.addEventListener('submit', function(e){
-        // If served locally via file:// (or if you want to test without a backend),
-        // intercept and redirect client-side to thank-you.html so you can test the flow.
         if(location.protocol === 'file:'){
           e.preventDefault();
-          // simple client-side validation fallback
           const required = [...form.querySelectorAll('[required]')];
           const invalid = required.some(inp => !inp.value.trim());
           if(invalid){
@@ -311,7 +306,6 @@
           }
           window.location.href = 'thank-you.html';
         }
-        // If deployed (http(s)), let the normal POST to server/Netlify proceed.
       });
     })();
   </script>
