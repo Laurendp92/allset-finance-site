@@ -7,6 +7,8 @@
   <meta name="description" content="Learn more about Allset Finance Solutions, an Irish-owned firm providing bookkeeping, tax compliance, reporting, and financial insights for businesses of all sizes." />
   <link rel="canonical" href="https://allsetfinancesolutions.com/about.html" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for Professional Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --navy: #28324a; /* unified professional navy */
@@ -57,9 +59,8 @@
     </div>
   </header>
 
-  <!-- About Hero (text spreads across the blue) -->
+  <!-- About Hero -->
   <section class="hero-bg text-white">
-    <!-- removed the 2-column grid so the About content spans the blue area -->
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-20">
       <div class="mx-auto">
         <h1 class="font-extrabold text-4xl md:text-5xl leading-tight">About Us</h1>
@@ -77,39 +78,65 @@
     </div>
   </section>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-  <!-- Our Mission -->
-  <div class="bg-white rounded-lg shadow p-6">
-    <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
-    <p>
-      We believe finance should do more than meet compliance. It should give business owners clarity,
-      confidence, and the freedom to make better decisions. That’s why we combine professional expertise
-      with practical tools and advice, helping clients not just stay on track but grow with purpose.
-    </p>
+  <!-- Mission / Difference / Image -->
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Our Mission -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+      <p>
+        We believe finance should do more than meet compliance. It should give business owners clarity,
+        confidence, and the freedom to make better decisions. That’s why we combine professional expertise
+        with practical tools and advice, helping clients not just stay on track but grow with purpose.
+      </p>
+    </div>
+
+    <!-- What Makes Us Different -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-xl font-semibold mb-4">What Makes Us Different</h3>
+      <p><strong>Clarity:</strong> Straightforward reports and visuals — no jargon, no confusion.</p>
+      <p><strong>Reliable:</strong> Accurate bookkeeping and compliance, delivered on time.</p>
+      <p><strong>Support at every step:</strong> From setup to ongoing financial guidance, we’re with you all the way.</p>
+      <p><strong>Scales with you:</strong> Flexible support that grows as your business grows.</p>
+      <p><strong>True partnership:</strong> We work alongside you, not just for you.</p>
+      <p><strong>Future-ready:</strong> Forecasts, dashboards, and insights to prepare you for what’s next.</p>
+    </div>
+
+    <!-- Image -->
+    <div class="flex items-center justify-center">
+      <img
+        src="about-image.png"
+        alt="Business meeting with laptops and discussion"
+        class="w-full h-auto rounded-lg shadow object-cover"
+        loading="lazy"
+      />
+    </div>
   </div>
 
-  <!-- What Makes Us Different -->
-  <div class="bg-white rounded-lg shadow p-6">
-    <h3 class="text-xl font-semibold mb-4">What Makes Us Different</h3>
-    <p><strong>Clarity:</strong> Straightforward reports and visuals — no jargon, no confusion.</p>
-    <p><strong>Reliable:</strong> Accurate bookkeeping and compliance, delivered on time.</p>
-    <p><strong>Support at every step:</strong> From setup to ongoing financial guidance, we’re with you all the way.</p>
-    <p><strong>Scales with you:</strong> Flexible support that grows as your business grows.</p>
-    <p><strong>True partnership:</strong> We work alongside you, not just for you.</p>
-    <p><strong>Future-ready:</strong> Forecasts, dashboards, and insights to prepare you for what’s next.</p>
+  <!-- Professional Highlight Icons -->
+  <div class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <i class="fas fa-chart-line text-3xl text-blue-700 mb-4"></i>
+        <h4 class="font-semibold mb-2">Clarity</h4>
+        <p class="text-gray-600 text-sm">Simple, jargon-free financial insights.</p>
+      </div>
+      <div>
+        <i class="fas fa-handshake text-3xl text-blue-700 mb-4"></i>
+        <h4 class="font-semibold mb-2">Partnership</h4>
+        <p class="text-gray-600 text-sm">We work alongside you at every stage.</p>
+      </div>
+      <div>
+        <i class="fas fa-bullseye text-3xl text-blue-700 mb-4"></i>
+        <h4 class="font-semibold mb-2">Future-ready</h4>
+        <p class="text-gray-600 text-sm">Forecasts and insights to prepare for growth.</p>
+      </div>
+      <div>
+        <i class="fas fa-map-marker-alt text-3xl text-blue-700 mb-4"></i>
+        <h4 class="font-semibold mb-2">Nationwide</h4>
+        <p class="text-gray-600 text-sm">Supporting businesses across Ireland.</p>
+      </div>
+    </div>
   </div>
-
-  <!-- Image (not in a card) -->
-  <div class="flex items-center justify-center">
-    <img
-      src="about-image.png"
-      alt="Business meeting with laptops and discussion"
-      class="w-full h-auto rounded-lg shadow object-cover"
-      loading="lazy"
-    />
-  </div>
-</div>
-</section>
 
   <!-- Footer -->
   <footer class="bg-white border-t py-6">
@@ -124,9 +151,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
