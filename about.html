@@ -78,7 +78,7 @@
     </div>
   </section>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
   <!-- Our Mission -->
   <div class="bg-white rounded-lg shadow p-6">
     <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
@@ -100,15 +100,16 @@
     <p><strong>Future-ready:</strong> Forecasts, dashboards, and insights to prepare you for what’s next.</p>
   </div>
 
-  <!-- Image (keeps natural ratio, no squeezing) -->
-  <div>
+  <!-- Image (aligned height, no box) -->
+  <div class="flex">
     <img
       src="about-image.png"
       alt="Business meeting with laptops and discussion"
-      class="w-full rounded-lg shadow object-cover"
+      class="w-full h-auto rounded-lg shadow object-cover"
+      style="max-height: 100%;"
       loading="lazy"
     />
-  </div>
+</div>
   </div>
 
   <!-- Professional Highlight Icons -->
@@ -150,5 +151,6 @@
   </footer>
 </body>
 </html>
+
 
 
