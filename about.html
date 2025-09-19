@@ -77,37 +77,39 @@
     </div>
   </section>
 
-<!-- Mission + Image (replace the existing block with this) -->
+<!-- Mission + Image (FLEX fallback) -->
 <section class="py-8 md:py-12 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6 items-stretch">
-    <!-- Mission card (left) -->
-    <div class="bg-white rounded-lg shadow p-8 flex flex-col justify-between h-full">
-      <div>
-        <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-stretch md:gap-6">
+      <!-- Left (mission) -->
+      <div class="md:w-7/12 bg-white rounded-lg shadow p-10 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
 
-        <p class="text-slate-700 leading-relaxed mb-6">
-          At Allset Finance Solutions, our mission is to empower businesses with the tools and expertise they need to thrive.
-          We combine professional knowledge with practical solutions — always delivered reliably and on time.
-        </p>
+          <p class="text-slate-700 leading-relaxed mb-6">
+            At Allset Finance Solutions, our mission is to empower businesses with the tools and
+            expertise they need to thrive. We combine professional knowledge with practical solutions —
+            always delivered reliably and on time.
+          </p>
 
-        <p class="text-slate-700 leading-relaxed">
-          By tailoring our services to the needs of each client, we ensure you not only meet compliance requirements but also
-          build a strong foundation for sustainable growth.
-        </p>
+          <p class="text-slate-700 leading-relaxed">
+            By tailoring our services to the needs of each client, we ensure you not only meet compliance
+            requirements but also build a strong foundation for sustainable growth.
+          </p>
+        </div>
+
+        <p class="text-emerald-600 font-semibold text-base mt-6">Clarity. Confidence. Growth.</p>
       </div>
 
-      <p class="text-emerald-600 font-semibold text-base mt-6 text-left">Clarity. Confidence. Growth.</p>
-    </div>
-
-    <!-- Image column (right) -->
-    <div class="flex items-center justify-center h-full">
-      <!-- adjust filename below if needed -->
-      <img
-        src="about-image.png"
-        alt="Business Growth Illustration"
-        class="max-h-[360px] md:max-h-80 w-auto object-contain rounded-lg shadow-sm"
-        loading="lazy"
-      />
+      <!-- Right (image) -->
+      <div class="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
+        <img
+          src="about-image.png"
+          alt="Business Growth Illustration"
+          class="w-full max-w-[420px] md:max-w-[480px] object-contain rounded-lg shadow-sm"
+          loading="lazy"
+        />
+      </div>
     </div>
   </div>
 </section>
@@ -194,6 +196,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
