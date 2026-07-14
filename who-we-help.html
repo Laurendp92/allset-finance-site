@@ -1,324 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Who We Help | Allset Accounting</title>
+<title>Who We Help | Allset Finance Solutions</title>
 
-<meta name="description" content="Allset provides practical accounting support for start-ups, contractors, growing businesses and established businesses.">
+<meta name="description" content="Allset Finance Solutions supports Irish start-ups, contractors, growing businesses and established companies with practical accounting and financial guidance.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    --navy:#28324a;
+    --emerald:#16a34a;
 }
 
-body {
-    background: #f8faf9;
-    color: #1d2b2a;
-    line-height: 1.7;
+.main-font {
+    font-family:'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.hero-bg {
+    background:var(--navy);
 }
 
-
-/* HERO */
-
-.hero {
-    background: #123c35;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
+.header-logo {
+    background:var(--navy);
 }
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    font-size: 20px;
-}
-
-
-/* INTRO */
-
-.intro {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.intro h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-
-
-/* CARDS */
-
-.help-grid {
-
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:35px;
-    padding-bottom:80px;
-
-}
-
-
-.help-card {
-
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-}
-
-
-.help-card h2 {
-
-    color:#123c35;
-    font-size:30px;
-    margin-bottom:20px;
-
-}
-
-
-.help-card h3 {
-
-    margin-top:30px;
-    margin-bottom:10px;
-    color:#1c5c51;
-
-}
-
-
-.help-card ul {
-
-    list-style:none;
-    margin-top:15px;
-
-}
-
-
-.help-card li {
-
-    margin-bottom:8px;
-
-}
-
-
-.help-card li::before {
-
-    content:"✓ ";
-    color:#1c8b70;
-    font-weight:bold;
-
-}
-
-
-/* CTA */
-
-
-.cta {
-
-    background:#e4f2ed;
-    padding:30px;
-    margin-top:30px;
-    border-radius:15px;
-
-}
-
-
-.button {
-
-    display:inline-block;
-    margin-top:20px;
-    background:#123c35;
-    color:white;
-    padding:14px 28px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-
-}
-
-
-.button:hover {
-
-    background:#1c5c51;
-
-}
-
-
-/* FOOTER */
-
-footer {
-
-    background:#123c35;
-    color:white;
-    text-align:center;
-    padding:30px;
-
-}
-
-
-
-/* MOBILE */
-
-
-@media(max-width:800px){
-
-.help-grid {
-
-grid-template-columns:1fr;
-
-}
-
-.hero h1 {
-
-font-size:36px;
-
-}
-
-.help-card {
-
-padding:25px;
-
-}
-
-}
-
 
 </style>
 
 </head>
 
 
-<body>
+<body class="antialiased text-slate-800 bg-slate-50 main-font">
 
 
-<section class="hero">
+<!-- HEADER -->
 
-<div class="container">
+<header class="bg-white shadow-sm">
 
-<h1>Who We Help</h1>
+<div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
-<p>
-At Allset, we provide practical accounting support designed around your stage of business.
-Whether you are starting out, contracting, growing or established, we help make your finances easier to manage.
-</p>
 
+<a href="/" class="flex items-center gap-3">
+
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold header-logo">
+AS
 </div>
 
-</section>
-
-
-
-<section class="intro">
-
-<div class="container">
-
-<h2>Accounting support that fits your business</h2>
-
-<p>
-Every business faces different financial challenges.
-Our approach is simple — understand where you are today, identify what you need, and provide the right support to help you move forward.
-</p>
-
+<div class="text-lg font-semibold text-slate-900">
+Allset Finance Solutions
 </div>
 
-</section>
-
-
-
-
-<section class="container help-grid">
-
-
-
-<!-- START UPS -->
-
-<div class="help-card">
-
-<h2>🚀 Start-Ups</h2>
-
-
-<h3>The challenge</h3>
-
-<p>
-Starting a business is exciting, but getting the financial foundations right from the beginning can feel overwhelming.
-</p>
-
-<p>
-Many new business owners are unsure where to start with:
-</p>
-
-<ul>
-
-<li>Choosing the right business structure</li>
-<li>Setting up accounting systems</li>
-<li>Understanding tax responsibilities</li>
-<li>Tracking cash flow</li>
-<li>Knowing what expenses can be claimed</li>
-
-</ul>
-
-
-<h3>How Allset can help</h3>
-
-<p>
-Allset helps start-ups build strong financial foundations from day one.
-</p>
-
-<p>
-We provide practical guidance to help you understand your numbers, create efficient systems and build processes that support future growth.
-</p>
-
-
-<h3>Relevant services</h3>
-
-<ul>
-
-<li>Business set-up guidance</li>
-<li>Accounting software advice and setup</li>
-<li>Bookkeeping support</li>
-<li>Tax registration support</li>
-<li>VAT guidance</li>
-<li>Allowable expense guidance</li>
-<li>Cash flow planning</li>
-<li>Financial reporting</li>
-
-</ul>
-
-
-<div class="cta">
-
-<h3>Ready to get started?</h3>
-
-<p>
-Create a strong financial foundation from the beginning.
-</p>
-
-<a class="button" href="contact.html">
-Book Your Free Consultation
 </a>
 
-</div>
+
+<nav class="hidden md:flex items-center gap-8 text-slate-700">
+
+<a href="/" class="hover:text-emerald-600">Home</a>
+
+<a href="/about.html" class="hover:text-emerald-600">
+About Allset
+</a>
+
+<a href="/services.html" class="hover:text-emerald-600">
+Services
+</a>
+
+<a href="/who-we-help.html" class="text-emerald-600">
+Who We Help
+</a>
+
+<a href="/contact.html"
+class="px-4 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700">
+Book a Free Consultation
+</a>
+
+</nav>
 
 
 </div>
+
+</header>
+
+
+
+
+<!-- HERO -->
+
+<section class="hero-bg text-white">
+
+<div class="max-w-7xl mx-auto px-6 py-24 text-center">
+
+<h1 class="text-4xl md:text-5xl font-extrabold">
+Who We Help
+</h1>
+
+<p class="mt-6 text-lg text-slate-100 max-w-3xl mx-auto">
+
+Every business reaches different financial challenges.
+Allset provides practical accounting support designed around where your business is today — and where you want it to go.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- INTRO CARDS -->
+
+
+<section class="max-w-7xl mx-auto px-6 py-20">
+
+
+<h2 class="text-3xl font-bold text-center text-slate-900">
+
+Support designed around your stage of business
+
+</h2>
+
+
+<p class="text-center text-slate-600 mt-4 max-w-3xl mx-auto">
+
+Whether you are starting out, contracting, growing or established, Allset helps simplify your finances and give you confidence in your numbers.
+
+</p>
+
+
+
+<div class="mt-12 grid md:grid-cols-4 gap-6">
+
+
+<a href="#startups"
+class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+
+<div class="text-3xl">🚀</div>
+
+<h3 class="mt-4 font-semibold text-xl">
+Start-Ups
+</h3>
+
+<p class="mt-2 text-slate-600 text-sm">
+Build strong financial foundations from day one.
+</p>
+
+</a>
+
+
+
+<a href="#contractors"
+class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+
+<div class="text-3xl">💼</div>
+
+<h3 class="mt-4 font-semibold text-xl">
+Contractors
+</h3>
+
+<p class="mt-2 text-slate-600 text-sm">
+Keep your finances simple while you focus on your work.
+</p>
+
+</a>
+
+
+
+
+<a href="#growing"
+class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+
+<div class="text-3xl">📈</div>
+
+<h3 class="mt-4 font-semibold text-xl">
+Growing Businesses
+</h3>
+
+<p class="mt-2 text-slate-600 text-sm">
+Gain clarity to make better decisions.
+</p>
+
+</a>
+
+
+
+
+<a href="#established"
+class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+
+<div class="text-3xl">🏢</div>
+
+<h3 class="mt-4 font-semibold text-xl">
+Established Businesses
+</h3>
+
+<p class="mt-2 text-slate-600 text-sm">
+Reliable support for long-term success.
+</p>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- HELP SECTIONS -->
+
+
+<section class="max-w-7xl mx-auto px-6 pb-24 space-y-12">
+
+
+
+
+
+<!-- STARTUPS -->
+
+<div id="startups"
+class="bg-white rounded-2xl border p-8 md:p-12">
+
+
+<h2 class="text-3xl font-bold text-slate-900">
+🚀 Start-Ups
+</h2>
+
+
+<h3 class="mt-8 text-xl font-semibold text-slate-900">
+The challenge
+</h3>
+
+
+<p class="mt-3 text-slate-600">
+
+Starting a business is exciting, but getting the financial foundations right can feel overwhelming.
+
+</p>
+
+
+<ul class="mt-4 space-y-2 text-slate-600">
+
+<li>✓ Choosing the right business structure</li>
+<li>✓ Setting up accounting systems</li>
+<li>✓ Understanding tax responsibilities</li>
+<li>✓ Tracking cash flow</li>
+<li>✓ Knowing what expenses you can claim</li>
+
+</ul>
+
+
+
+<h3 class="mt-8 text-xl font-semibold">
+How Allset can help
+</h3>
+
+
+<p class="mt-3 text-slate-600">
+
+Allset helps start-ups create strong financial foundations from day one.
+
+We provide practical guidance, accounting setup support and systems that grow with your business.
+
+</p>
+
+
+
+<h3 class="mt-8 font-semibold text-xl">
+Relevant services
+</h3>
+
+
+<ul class="mt-3 grid md:grid-cols-2 gap-2 text-slate-600">
+
+<li>✓ Business setup guidance</li>
+<li>✓ Accounting software setup</li>
+<li>✓ Bookkeeping support</li>
+<li>✓ Tax registration support</li>
+<li>✓ VAT guidance</li>
+<li>✓ Cash flow planning</li>
+
+</ul>
+
+
+
+<a href="/contact.html"
+class="inline-block mt-8 bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-emerald-700">
+
+Book Your Free Consultation
+
+</a>
+
+
+</div>
+
 
 
 
@@ -326,77 +311,76 @@ Book Your Free Consultation
 
 <!-- CONTRACTORS -->
 
-
-<div class="help-card">
-
-<h2>💼 Contractors</h2>
+<div id="contractors"
+class="bg-white rounded-2xl border p-8 md:p-12">
 
 
-<h3>The challenge</h3>
+<h2 class="text-3xl font-bold">
+💼 Contractors
+</h2>
 
-<p>
-Contracting offers flexibility and independence, but managing the financial side can become complicated.
+
+<h3 class="mt-8 text-xl font-semibold">
+The challenge
+</h3>
+
+
+<p class="mt-3 text-slate-600">
+
+Contracting offers flexibility, but managing income, expenses and tax obligations can become complicated.
+
 </p>
 
-<p>
-Contractors often need support with:
-</p>
 
-<ul>
+<ul class="mt-4 space-y-2 text-slate-600">
 
-<li>Understanding tax obligations</li>
-<li>Managing income and expenses</li>
-<li>Keeping accurate records</li>
-<li>Staying compliant</li>
-<li>Preparing financially throughout the year</li>
+<li>✓ Understanding tax obligations</li>
+<li>✓ Keeping accurate records</li>
+<li>✓ Managing expenses</li>
+<li>✓ Staying compliant</li>
 
 </ul>
 
 
-<h3>How Allset can help</h3>
 
-<p>
-Allset provides straightforward accounting support designed around the needs of contractors.
+<h3 class="mt-8 text-xl font-semibold">
+How Allset can help
+</h3>
+
+
+<p class="mt-3 text-slate-600">
+
+We simplify contractor accounting, keep your finances organised and provide advice when you need it.
+
 </p>
 
-<p>
-We simplify your finances, keep you compliant and help you understand your financial position.
-</p>
+
+<h3 class="mt-8 text-xl font-semibold">
+Relevant services
+</h3>
 
 
-<h3>Relevant services</h3>
+<ul class="mt-3 grid md:grid-cols-2 gap-2 text-slate-600">
 
-<ul>
-
-<li>Income tax return preparation</li>
-<li>Bookkeeping support</li>
-<li>Expense guidance</li>
-<li>VAT support</li>
-<li>Accounting software solutions</li>
-<li>Tax planning</li>
-<li>Ongoing accounting advice</li>
+<li>✓ Income tax returns</li>
+<li>✓ Bookkeeping</li>
+<li>✓ VAT support</li>
+<li>✓ Expense guidance</li>
+<li>✓ Tax planning</li>
+<li>✓ Accounting software</li>
 
 </ul>
 
 
-<div class="cta">
+<a href="/contact.html"
+class="inline-block mt-8 bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold">
 
-<h3>Need simpler accounting?</h3>
-
-<p>
-Spend less time worrying about paperwork and more time focusing on your work.
-</p>
-
-<a class="button" href="contact.html">
 Book Your Free Consultation
+
 </a>
 
-</div>
-
 
 </div>
-
-
 
 
 
@@ -404,80 +388,77 @@ Book Your Free Consultation
 
 <!-- GROWING -->
 
-
-<div class="help-card">
-
-<h2>📈 Growing Businesses</h2>
+<div id="growing"
+class="bg-white rounded-2xl border p-8 md:p-12">
 
 
-<h3>The challenge</h3>
+<h2 class="text-3xl font-bold">
+📈 Growing Businesses
+</h2>
 
-<p>
-As your business grows, your financial needs become more complex.
+
+<h3 class="mt-8 text-xl font-semibold">
+The challenge
+</h3>
+
+
+<p class="mt-3 text-slate-600">
+
+As businesses grow, spreadsheets and basic bookkeeping often stop providing the information needed to make decisions.
+
 </p>
 
-<p>
-Many businesses reach a point where spreadsheets and basic bookkeeping are no longer enough.
-</p>
 
+<ul class="mt-4 space-y-2 text-slate-600">
 
-<ul>
-
-<li>Understanding profitability</li>
-<li>Managing cash flow</li>
-<li>Making informed decisions</li>
-<li>Improving processes</li>
-<li>Planning ahead</li>
+<li>✓ Understanding profitability</li>
+<li>✓ Managing cash flow</li>
+<li>✓ Improving processes</li>
+<li>✓ Planning future growth</li>
 
 </ul>
 
 
-<h3>How Allset can help</h3>
 
-<p>
-Allset provides the financial insight and support growing businesses need to move forward confidently.
+<h3 class="mt-8 text-xl font-semibold">
+How Allset can help
+</h3>
+
+
+<p class="mt-3 text-slate-600">
+
+We provide financial insight, reporting and systems that help growing businesses move forward confidently.
+
 </p>
 
 
-<p>
-You get more than compliance — you get clarity.
-</p>
+
+<h3 class="mt-8 text-xl font-semibold">
+Relevant services
+</h3>
 
 
-<h3>Relevant services</h3>
+<ul class="mt-3 grid md:grid-cols-2 gap-2 text-slate-600">
 
-<ul>
-
-<li>Management accounts</li>
-<li>Financial reporting</li>
-<li>Cash flow forecasting</li>
-<li>Budget planning</li>
-<li>Bookkeeping support</li>
-<li>Payroll services</li>
-<li>Tax compliance</li>
-<li>Accounting systems improvement</li>
+<li>✓ Management accounts</li>
+<li>✓ Financial reporting</li>
+<li>✓ Cash flow forecasting</li>
+<li>✓ Budget planning</li>
+<li>✓ Payroll services</li>
+<li>✓ Tax compliance</li>
 
 </ul>
 
 
-<div class="cta">
+<a href="/contact.html"
+class="inline-block mt-8 bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold">
 
-<h3>Ready for better financial visibility?</h3>
-
-<p>
-Understand your numbers and plan your next stage of growth.
-</p>
-
-<a class="button" href="contact.html">
 Book Your Free Consultation
+
 </a>
 
 
 </div>
-
-
-</div>
-
 
 
 
@@ -488,76 +469,75 @@ Book Your Free Consultation
 <!-- ESTABLISHED -->
 
 
-<div class="help-card">
+<div id="established"
+class="bg-white rounded-2xl border p-8 md:p-12">
 
-<h2>🏢 Established Businesses</h2>
+
+<h2 class="text-3xl font-bold">
+🏢 Established Businesses
+</h2>
 
 
-<h3>The challenge</h3>
+<h3 class="mt-8 text-xl font-semibold">
+The challenge
+</h3>
 
-<p>
+
+<p class="mt-3 text-slate-600">
+
 Established businesses need reliable financial support to stay efficient, compliant and prepared for the future.
+
 </p>
 
 
-<ul>
+<ul class="mt-4 space-y-2 text-slate-600">
 
-<li>Managing increasing financial complexity</li>
-<li>Improving internal processes</li>
-<li>Getting timely financial information</li>
-<li>Reducing administration</li>
-<li>Planning future growth</li>
+<li>✓ Managing financial complexity</li>
+<li>✓ Improving processes</li>
+<li>✓ Reducing administration</li>
+<li>✓ Planning ahead</li>
 
 </ul>
 
 
-<h3>How Allset can help</h3>
+<h3 class="mt-8 text-xl font-semibold">
+How Allset can help
+</h3>
 
-<p>
-Allset works alongside established businesses by providing dependable accounting support and practical financial guidance.
+
+<p class="mt-3 text-slate-600">
+
+Allset works alongside businesses by providing dependable accounting support and practical financial guidance.
+
 </p>
 
 
-<p>
-Your business deserves a financial partner who understands your goals.
-</p>
+<h3 class="mt-8 text-xl font-semibold">
+Relevant services
+</h3>
 
 
-<h3>Relevant services</h3>
+<ul class="mt-3 grid md:grid-cols-2 gap-2 text-slate-600">
 
-<ul>
-
-<li>Financial statements</li>
-<li>Management reporting</li>
-<li>Payroll support</li>
-<li>Bookkeeping services</li>
-<li>Cash flow forecasting</li>
-<li>Tax compliance</li>
-<li>Accounting software optimisation</li>
-<li>Ongoing financial support</li>
+<li>✓ Financial statements</li>
+<li>✓ Management reporting</li>
+<li>✓ Payroll support</li>
+<li>✓ Bookkeeping</li>
+<li>✓ Tax compliance</li>
+<li>✓ Software optimisation</li>
 
 </ul>
 
 
+<a href="/contact.html"
+class="inline-block mt-8 bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold">
 
-<div class="cta">
-
-<h3>Looking for better accounting support?</h3>
-
-<p>
-Let's discuss how Allset can support your business.
-</p>
-
-<a class="button" href="contact.html">
 Book Your Free Consultation
+
 </a>
 
 
 </div>
-
-
-</div>
-
 
 
 </section>
@@ -565,13 +545,51 @@ Book Your Free Consultation
 
 
 
-<footer>
 
-<p>
-© Allset Accounting. All rights reserved.
+<!-- FINAL CTA -->
+
+<section class="hero-bg text-white py-16">
+
+<div class="max-w-4xl mx-auto text-center px-6">
+
+<h2 class="text-3xl font-bold">
+Not sure what support you need?
+</h2>
+
+<p class="mt-4 text-slate-100">
+
+Let's discuss your business and find the right financial support for your next stage.
+
 </p>
 
+
+<a href="/contact.html"
+class="inline-block mt-6 bg-emerald-600 px-7 py-3 rounded-md font-semibold">
+
+Get Started
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<footer class="bg-white border-t py-8">
+
+<div class="max-w-7xl mx-auto px-6 text-center text-sm text-slate-600">
+
+© Allset Finance Solutions
+
+</div>
+
 </footer>
+
 
 
 </body>
